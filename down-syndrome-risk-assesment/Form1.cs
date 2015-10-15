@@ -20,37 +20,37 @@ namespace down_syndrome_risk_assesment
             ventriculomegalyList.SelectedItem = "Not Assessed";
             echogenicBowelList.SelectedItem = "Not Assessed";
             hydronephrosisList.SelectedItem = "Not Assessed";
-            legBoneList.SelectedItem = "Not Assessed";
             nasalBoneList.SelectedItem = "Not Assessed";
             bpdList.SelectedItem = "Not Assessed";
             nuchalFoldList.SelectedItem = "Not Assessed";
+
+            legBoneList.SelectedItem = "Not Assessed";
             legBoneBox.SelectedItem = "Short femur";
+            legBoneList.SelectedIndexChanged += legBoneList_SelectedIndexChanged;
+            legBoneBox.SelectedIndexChanged += legBoneBox_SelectedIndexChanged;
         }
 
-        double echogenicFocusRatio;
-        double ventriculomegalyRatio;
-        double echogenicBowelRatio;
-        double hydronephrosisRatio;
-        double legBoneRatio;
-        double nasalBoneRatio;
+        double echogenicFocusRatio = 1;
+        double ventriculomegalyRatio = 1;
+        double echogenicBowelRatio = 1;
+        double hydronephrosisRatio = 1;
+        double legBoneRatio = 1;
+        double nasalBoneRatio = 1;
+
+        // All arrays must follow the pattern of { "Yes", "No", "Not Assessed" }
+        // to mirror the pattern used by the DropDownLists.
+        double[] echogenicFocusRatios = { 5.83, 0.8, 1 };
+        double[] ventriculomegalyRatios = { 27.52, 0.94, 1 };
+        double[] echogenicBowelsRatios = { 11.44, 0.9, 1 };
+        double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
+        double[,] legBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
 
         private void echogenicFocusList_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
             if (comboBox != null)
             {
-                switch (comboBox.SelectedItem.ToString())
-                {
-                    case "Yes":
-                        echogenicFocusRatio = 5.83;
-                        break;
-                    case "No":
-                        echogenicFocusRatio = 0.8;
-                        break;
-                    default:
-                        echogenicFocusRatio = 1;
-                        break;
-                }
+                echogenicFocusRatio = echogenicFocusRatios[comboBox.SelectedIndex];
                 echogenicFocusLabel.Text = echogenicFocusRatio.ToString();
             }
         }
@@ -60,18 +60,7 @@ namespace down_syndrome_risk_assesment
             ComboBox comboBox = sender as ComboBox;
             if (comboBox != null)
             {
-                switch (comboBox.SelectedItem.ToString())
-                {
-                    case "Yes":
-                        ventriculomegalyRatio = 27.52;
-                        break;
-                    case "No":
-                        ventriculomegalyRatio = 0.94;
-                        break;
-                    default:
-                        ventriculomegalyRatio = 1;
-                        break;
-                }
+                ventriculomegalyRatio = ventriculomegalyRatios[comboBox.SelectedIndex];
                 ventriculomegalyLabel.Text = ventriculomegalyRatio.ToString();
             }
         }
@@ -81,18 +70,7 @@ namespace down_syndrome_risk_assesment
             ComboBox comboBox = sender as ComboBox;
             if (comboBox != null)
             {
-                switch (comboBox.SelectedItem.ToString())
-                {
-                    case "Yes":
-                        echogenicBowelRatio = 11.44;
-                        break;
-                    case "No":
-                        echogenicBowelRatio = 0.9;
-                        break;
-                    default:
-                        echogenicBowelRatio = 1;
-                        break;
-                }
+                echogenicBowelRatio = echogenicBowelsRatios[comboBox.SelectedIndex];
                 echogenicBowelLabel.Text = echogenicBowelRatio.ToString();
             }
         }
@@ -102,18 +80,7 @@ namespace down_syndrome_risk_assesment
             ComboBox comboBox = sender as ComboBox;
             if (comboBox != null)
             {
-                switch (comboBox.SelectedItem.ToString())
-                {
-                    case "Yes":
-                        hydronephrosisRatio = 7.63;
-                        break;
-                    case "No":
-                        hydronephrosisRatio = 0.92;
-                        break;
-                    default:
-                        hydronephrosisRatio = 1;
-                        break;
-                }
+                hydronephrosisRatio = hydronephrosisRatios[comboBox.SelectedIndex];
                 hydronephrosisLabel.Text = hydronephrosisRatio.ToString();
             }
         }
@@ -123,63 +90,17 @@ namespace down_syndrome_risk_assesment
             ComboBox comboBox = sender as ComboBox;
             if (comboBox != null)
             {
-                switch (comboBox.SelectedItem.ToString())
-                {
-                    case "Yes":
-                        if (legBoneBox.SelectedItem.ToString() == "Short femur")
-                            legBoneRatio = 3.72;
-                        else
-                            legBoneRatio = 4.81;
-                        break;
-                    case "No":
-                        if (legBoneBox.SelectedItem.ToString() == "Short femur")
-                            legBoneRatio = 0.8;
-                        else
-                            legBoneRatio = 0.74;
-                        break;
-                    default:
-                        legBoneRatio = 1;
-                        break;
-                }
+                legBoneRatio = legBoneRatios[legBoneBox.SelectedIndex, comboBox.SelectedIndex];
                 legBoneLabel.Text = legBoneRatio.ToString();
             }
         }
 
         private void legBoneBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox comboBox = sender as ComboBox;
-            if (comboBox != null)
+            ComboBox combobox = sender as ComboBox;
+            if (combobox != null)
             {
-                if (comboBox.SelectedItem.ToString() == "Short femur")
-                {
-                    switch (legBoneList.SelectedItem.ToString())
-                    {
-                        case "Yes":
-                            legBoneRatio = 3.72;
-                            break;
-                        case "No":
-                            legBoneRatio = 0.8;
-                            break;
-                        default:
-                            legBoneRatio = 1;
-                            break;
-                    }
-                }
-                else
-                {
-                    switch (legBoneList.SelectedItem.ToString())
-                    {
-                        case "Yes":
-                            legBoneRatio = 4.81;
-                            break;
-                        case "No":
-                            legBoneRatio = 0.74;
-                            break;
-                        default:
-                            legBoneRatio = 1;
-                            break;
-                    }
-                }
+                legBoneRatio = legBoneRatios[combobox.SelectedIndex, legBoneList.SelectedIndex];
                 legBoneLabel.Text = legBoneRatio.ToString();
             }
         }

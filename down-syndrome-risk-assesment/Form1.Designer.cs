@@ -569,7 +569,6 @@
             this.legBoneList.Name = "legBoneList";
             this.legBoneList.Size = new System.Drawing.Size(317, 33);
             this.legBoneList.TabIndex = 47;
-            this.legBoneList.SelectedIndexChanged += new System.EventHandler(this.legBoneList_SelectedIndexChanged);
             // 
             // legBoneBox
             // 
@@ -585,7 +584,6 @@
             this.legBoneBox.Name = "legBoneBox";
             this.legBoneBox.Size = new System.Drawing.Size(317, 33);
             this.legBoneBox.TabIndex = 48;
-            this.legBoneBox.SelectedIndexChanged += new System.EventHandler(this.legBoneBox_SelectedIndexChanged);
             // 
             // nasalBoneList
             // 
