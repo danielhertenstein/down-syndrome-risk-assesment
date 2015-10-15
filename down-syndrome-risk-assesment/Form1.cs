@@ -41,21 +41,17 @@ namespace down_syndrome_risk_assesment
             {
                 switch (comboBox.SelectedItem.ToString())
                 {
-                    case "Not Assessed":
-                        echogenicFocusRatio = 1;
-                        echogenicFocusLabel.Text = echogenicFocusRatio.ToString();
-                        break;
                     case "Yes":
                         echogenicFocusRatio = 5.83;
-                        echogenicFocusLabel.Text = echogenicFocusRatio.ToString();
                         break;
                     case "No":
                         echogenicFocusRatio = 0.8;
-                        echogenicFocusLabel.Text = echogenicFocusRatio.ToString();
                         break;
                     default:
+                        echogenicFocusRatio = 1;
                         break;
                 }
+                echogenicFocusLabel.Text = echogenicFocusRatio.ToString();
             }
         }
 
@@ -66,21 +62,17 @@ namespace down_syndrome_risk_assesment
             {
                 switch (comboBox.SelectedItem.ToString())
                 {
-                    case "Not Assessed":
-                        ventriculomegalyRatio = 1;
-                        ventriculomegalyLabel.Text = ventriculomegalyRatio.ToString();
-                        break;
                     case "Yes":
                         ventriculomegalyRatio = 27.52;
-                        ventriculomegalyLabel.Text = ventriculomegalyRatio.ToString();
                         break;
                     case "No":
                         ventriculomegalyRatio = 0.94;
-                        ventriculomegalyLabel.Text = ventriculomegalyRatio.ToString();
                         break;
                     default:
+                        ventriculomegalyRatio = 1;
                         break;
                 }
+                ventriculomegalyLabel.Text = ventriculomegalyRatio.ToString();
             }
         }
 
@@ -91,21 +83,17 @@ namespace down_syndrome_risk_assesment
             {
                 switch (comboBox.SelectedItem.ToString())
                 {
-                    case "Not Assessed":
-                        echogenicBowelRatio = 1;
-                        echogenicBowelLabel.Text = echogenicBowelRatio.ToString();
-                        break;
                     case "Yes":
                         echogenicBowelRatio = 11.44;
-                        echogenicBowelLabel.Text = echogenicBowelRatio.ToString();
                         break;
                     case "No":
                         echogenicBowelRatio = 0.9;
-                        echogenicBowelLabel.Text = echogenicBowelRatio.ToString();
                         break;
                     default:
+                        echogenicBowelRatio = 1;
                         break;
                 }
+                echogenicBowelLabel.Text = echogenicBowelRatio.ToString();
             }
         }
 
@@ -116,21 +104,17 @@ namespace down_syndrome_risk_assesment
             {
                 switch (comboBox.SelectedItem.ToString())
                 {
-                    case "Not Assessed":
-                        hydronephrosisRatio = 1;
-                        hydronephrosisLabel.Text = hydronephrosisRatio.ToString();
-                        break;
                     case "Yes":
                         hydronephrosisRatio = 7.63;
-                        hydronephrosisLabel.Text = hydronephrosisRatio.ToString();
                         break;
                     case "No":
                         hydronephrosisRatio = 0.92;
-                        hydronephrosisLabel.Text = hydronephrosisRatio.ToString();
                         break;
                     default:
+                        hydronephrosisRatio = 1;
                         break;
                 }
+                hydronephrosisLabel.Text = hydronephrosisRatio.ToString();
             }
         }
 
@@ -141,27 +125,23 @@ namespace down_syndrome_risk_assesment
             {
                 switch (comboBox.SelectedItem.ToString())
                 {
-                    case "Not Assessed":
-                        legBoneRatio = 1;
-                        legBoneLabel.Text = legBoneRatio.ToString();
-                        break;
                     case "Yes":
                         if (legBoneBox.SelectedItem.ToString() == "Short femur")
                             legBoneRatio = 3.72;
                         else
                             legBoneRatio = 4.81;
-                        legBoneLabel.Text = legBoneRatio.ToString();
                         break;
                     case "No":
                         if (legBoneBox.SelectedItem.ToString() == "Short femur")
                             legBoneRatio = 0.8;
                         else
                             legBoneRatio = 0.74;
-                        legBoneLabel.Text = legBoneRatio.ToString();
                         break;
                     default:
+                        legBoneRatio = 1;
                         break;
                 }
+                legBoneLabel.Text = legBoneRatio.ToString();
             }
         }
 
@@ -174,19 +154,14 @@ namespace down_syndrome_risk_assesment
                 {
                     switch (legBoneList.SelectedItem.ToString())
                     {
-                        case "Not Assessed":
-                            legBoneRatio = 1;
-                            legBoneLabel.Text = legBoneRatio.ToString();
-                            break;
                         case "Yes":
                             legBoneRatio = 3.72;
-                            legBoneLabel.Text = legBoneRatio.ToString();
                             break;
                         case "No":
                             legBoneRatio = 0.8;
-                            legBoneLabel.Text = legBoneRatio.ToString();
                             break;
                         default:
+                            legBoneRatio = 1;
                             break;
                     }
                 }
@@ -194,22 +169,18 @@ namespace down_syndrome_risk_assesment
                 {
                     switch (legBoneList.SelectedItem.ToString())
                     {
-                        case "Not Assessed":
-                            legBoneRatio = 1;
-                            legBoneLabel.Text = legBoneRatio.ToString();
-                            break;
                         case "Yes":
                             legBoneRatio = 4.81;
-                            legBoneLabel.Text = legBoneRatio.ToString();
                             break;
                         case "No":
                             legBoneRatio = 0.74;
-                            legBoneLabel.Text = legBoneRatio.ToString();
                             break;
                         default:
+                            legBoneRatio = 1;
                             break;
                     }
                 }
+                legBoneLabel.Text = legBoneRatio.ToString();
             }
         }
 
@@ -220,21 +191,17 @@ namespace down_syndrome_risk_assesment
             {
                 switch (comboBox.SelectedItem.ToString())
                 {
-                    case "Not Assessed":
-                        nasalBoneRatio = 1;
-                        nasalBoneLabel.Text = nasalBoneRatio.ToString();
-                        break;
                     case "Yes":
                         nasalBoneRatio = 23.27;
-                        nasalBoneLabel.Text = nasalBoneRatio.ToString();
                         break;
                     case "No":
                         nasalBoneRatio = 0.46;
-                        nasalBoneLabel.Text = nasalBoneRatio.ToString();
                         break;
                     default:
+                        nasalBoneRatio = 1;
                         break;
                 }
+                nasalBoneLabel.Text = nasalBoneRatio.ToString();
             }
         }
 
