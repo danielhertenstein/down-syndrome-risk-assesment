@@ -37,34 +37,34 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.nuchalFoldRatio = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.legBoneRatio = new System.Windows.Forms.Label();
+            this.nasalBoneRatio = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.hydronephrosisRatio = new System.Windows.Forms.Label();
+            this.echogenicFocusRatio = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.echogenicBowelRatio = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.ventriculomegalyRatio = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.echogenicFocusList = new System.Windows.Forms.ComboBox();
+            this.ventriculomegalyList = new System.Windows.Forms.ComboBox();
+            this.echogenicBowelList = new System.Windows.Forms.ComboBox();
+            this.hydronephrosisList = new System.Windows.Forms.ComboBox();
+            this.legBoneList = new System.Windows.Forms.ComboBox();
+            this.legBoneBox = new System.Windows.Forms.ComboBox();
+            this.nasalBoneList = new System.Windows.Forms.ComboBox();
+            this.bpdList = new System.Windows.Forms.ComboBox();
+            this.nuchalFoldList = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,34 +83,34 @@
             this.tableLayoutPanel1.Controls.Add(this.label25, 1, 13);
             this.tableLayoutPanel1.Controls.Add(this.label23, 2, 13);
             this.tableLayoutPanel1.Controls.Add(this.label21, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.label20, 2, 15);
+            this.tableLayoutPanel1.Controls.Add(this.nuchalFoldRatio, 2, 15);
             this.tableLayoutPanel1.Controls.Add(this.label19, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label18, 0, 15);
-            this.tableLayoutPanel1.Controls.Add(this.label17, 2, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label16, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.legBoneRatio, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nasalBoneRatio, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.hydronephrosisRatio, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.echogenicFocusRatio, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.echogenicBowelRatio, 2, 8);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.ventriculomegalyRatio, 2, 7);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label6, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox5, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox6, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox7, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox8, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox9, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox10, 1, 14);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox11, 1, 15);
+            this.tableLayoutPanel1.Controls.Add(this.echogenicFocusList, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.ventriculomegalyList, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.echogenicBowelList, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.hydronephrosisList, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.legBoneList, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.legBoneBox, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nasalBoneList, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.bpdList, 1, 14);
+            this.tableLayoutPanel1.Controls.Add(this.nuchalFoldList, 1, 15);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -141,7 +141,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.PaleGreen;
+            this.label26.BackColor = System.Drawing.Color.LightGreen;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label26.Location = new System.Drawing.Point(167, 527);
             this.label26.Name = "label26";
@@ -177,7 +177,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.PaleGreen;
+            this.label28.BackColor = System.Drawing.Color.LightGreen;
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label28.Location = new System.Drawing.Point(167, 558);
             this.label28.Name = "label28";
@@ -234,16 +234,16 @@
             this.label21.Text = "Marker";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label20
+            // nuchalFoldRatio
             // 
-            this.label20.AutoSize = true;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(331, 465);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(160, 31);
-            this.label20.TabIndex = 19;
-            this.label20.Text = "1";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nuchalFoldRatio.AutoSize = true;
+            this.nuchalFoldRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nuchalFoldRatio.Location = new System.Drawing.Point(331, 465);
+            this.nuchalFoldRatio.Name = "nuchalFoldRatio";
+            this.nuchalFoldRatio.Size = new System.Drawing.Size(160, 31);
+            this.nuchalFoldRatio.TabIndex = 19;
+            this.nuchalFoldRatio.Text = "1";
+            this.nuchalFoldRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label19
             // 
@@ -267,27 +267,27 @@
             this.label18.Text = "Nuchal fold thickness";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label17
+            // legBoneRatio
             // 
-            this.label17.AutoSize = true;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(331, 310);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(160, 31);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "1";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.legBoneRatio.AutoSize = true;
+            this.legBoneRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.legBoneRatio.Location = new System.Drawing.Point(331, 310);
+            this.legBoneRatio.Name = "legBoneRatio";
+            this.legBoneRatio.Size = new System.Drawing.Size(160, 31);
+            this.legBoneRatio.TabIndex = 16;
+            this.legBoneRatio.Text = "1";
+            this.legBoneRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label16
+            // nasalBoneRatio
             // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(331, 341);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(160, 31);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "1";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nasalBoneRatio.AutoSize = true;
+            this.nasalBoneRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nasalBoneRatio.Location = new System.Drawing.Point(331, 341);
+            this.nasalBoneRatio.Name = "nasalBoneRatio";
+            this.nasalBoneRatio.Size = new System.Drawing.Size(160, 31);
+            this.nasalBoneRatio.TabIndex = 15;
+            this.nasalBoneRatio.Text = "1";
+            this.nasalBoneRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label15
             // 
@@ -300,27 +300,27 @@
             this.label15.Text = "Absent or hypoplastic NB";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label14
+            // hydronephrosisRatio
             // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(331, 279);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(160, 31);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "1";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hydronephrosisRatio.AutoSize = true;
+            this.hydronephrosisRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hydronephrosisRatio.Location = new System.Drawing.Point(331, 279);
+            this.hydronephrosisRatio.Name = "hydronephrosisRatio";
+            this.hydronephrosisRatio.Size = new System.Drawing.Size(160, 31);
+            this.hydronephrosisRatio.TabIndex = 13;
+            this.hydronephrosisRatio.Text = "1";
+            this.hydronephrosisRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label13
+            // echogenicFocusRatio
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(331, 186);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(160, 31);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "1";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.echogenicFocusRatio.AutoSize = true;
+            this.echogenicFocusRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.echogenicFocusRatio.Location = new System.Drawing.Point(331, 186);
+            this.echogenicFocusRatio.Name = "echogenicFocusRatio";
+            this.echogenicFocusRatio.Size = new System.Drawing.Size(160, 31);
+            this.echogenicFocusRatio.TabIndex = 12;
+            this.echogenicFocusRatio.Text = "1";
+            this.echogenicFocusRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
@@ -333,16 +333,16 @@
             this.label12.Text = "Mild hydronephrosis";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label11
+            // echogenicBowelRatio
             // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(331, 248);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 31);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "1";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.echogenicBowelRatio.AutoSize = true;
+            this.echogenicBowelRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.echogenicBowelRatio.Location = new System.Drawing.Point(331, 248);
+            this.echogenicBowelRatio.Name = "echogenicBowelRatio";
+            this.echogenicBowelRatio.Size = new System.Drawing.Size(160, 31);
+            this.echogenicBowelRatio.TabIndex = 10;
+            this.echogenicBowelRatio.Text = "1";
+            this.echogenicBowelRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -366,16 +366,16 @@
             this.label9.Text = "Echogenic bowel";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // ventriculomegalyRatio
             // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(331, 217);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 31);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "1";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ventriculomegalyRatio.AutoSize = true;
+            this.ventriculomegalyRatio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ventriculomegalyRatio.Location = new System.Drawing.Point(331, 217);
+            this.ventriculomegalyRatio.Name = "ventriculomegalyRatio";
+            this.ventriculomegalyRatio.Size = new System.Drawing.Size(160, 31);
+            this.ventriculomegalyRatio.TabIndex = 7;
+            this.ventriculomegalyRatio.Text = "1";
+            this.ventriculomegalyRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
             // 
@@ -450,142 +450,158 @@
             this.label3.Text = "Ventriculomegaly";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox3
+            // echogenicFocusList
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.echogenicFocusList.BackColor = System.Drawing.SystemColors.Window;
+            this.echogenicFocusList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.echogenicFocusList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.echogenicFocusList.FormattingEnabled = true;
+            this.echogenicFocusList.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Not Assessed"});
-            this.comboBox3.Location = new System.Drawing.Point(167, 189);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(158, 21);
-            this.comboBox3.TabIndex = 43;
+            this.echogenicFocusList.Location = new System.Drawing.Point(167, 189);
+            this.echogenicFocusList.Name = "echogenicFocusList";
+            this.echogenicFocusList.Size = new System.Drawing.Size(158, 21);
+            this.echogenicFocusList.TabIndex = 43;
             // 
-            // comboBox4
+            // ventriculomegalyList
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.ventriculomegalyList.BackColor = System.Drawing.SystemColors.Window;
+            this.ventriculomegalyList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ventriculomegalyList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ventriculomegalyList.FormattingEnabled = true;
+            this.ventriculomegalyList.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Not Assessed"});
-            this.comboBox4.Location = new System.Drawing.Point(167, 220);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(158, 21);
-            this.comboBox4.TabIndex = 44;
+            this.ventriculomegalyList.Location = new System.Drawing.Point(167, 220);
+            this.ventriculomegalyList.Name = "ventriculomegalyList";
+            this.ventriculomegalyList.Size = new System.Drawing.Size(158, 21);
+            this.ventriculomegalyList.TabIndex = 44;
             // 
-            // comboBox5
+            // echogenicBowelList
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.echogenicBowelList.BackColor = System.Drawing.SystemColors.Window;
+            this.echogenicBowelList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.echogenicBowelList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.echogenicBowelList.FormattingEnabled = true;
+            this.echogenicBowelList.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Not Assessed"});
-            this.comboBox5.Location = new System.Drawing.Point(167, 251);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(158, 21);
-            this.comboBox5.TabIndex = 45;
+            this.echogenicBowelList.Location = new System.Drawing.Point(167, 251);
+            this.echogenicBowelList.Name = "echogenicBowelList";
+            this.echogenicBowelList.Size = new System.Drawing.Size(158, 21);
+            this.echogenicBowelList.TabIndex = 45;
             // 
-            // comboBox6
+            // hydronephrosisList
             // 
-            this.comboBox6.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.hydronephrosisList.BackColor = System.Drawing.SystemColors.Window;
+            this.hydronephrosisList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hydronephrosisList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.hydronephrosisList.FormattingEnabled = true;
+            this.hydronephrosisList.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Not Assessed"});
-            this.comboBox6.Location = new System.Drawing.Point(167, 282);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(158, 21);
-            this.comboBox6.TabIndex = 46;
+            this.hydronephrosisList.Location = new System.Drawing.Point(167, 282);
+            this.hydronephrosisList.Name = "hydronephrosisList";
+            this.hydronephrosisList.Size = new System.Drawing.Size(158, 21);
+            this.hydronephrosisList.TabIndex = 46;
             // 
-            // comboBox7
+            // legBoneList
             // 
-            this.comboBox7.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.legBoneList.BackColor = System.Drawing.SystemColors.Window;
+            this.legBoneList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.legBoneList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.legBoneList.FormattingEnabled = true;
+            this.legBoneList.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Not Assessed"});
-            this.comboBox7.Location = new System.Drawing.Point(167, 313);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(158, 21);
-            this.comboBox7.TabIndex = 47;
+            this.legBoneList.Location = new System.Drawing.Point(167, 313);
+            this.legBoneList.Name = "legBoneList";
+            this.legBoneList.Size = new System.Drawing.Size(158, 21);
+            this.legBoneList.TabIndex = 47;
             // 
-            // comboBox8
+            // legBoneBox
             // 
-            this.comboBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.legBoneBox.BackColor = System.Drawing.SystemColors.Window;
+            this.legBoneBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.legBoneBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.legBoneBox.FormattingEnabled = true;
+            this.legBoneBox.Items.AddRange(new object[] {
             "Short femur",
             "Short humerus"});
-            this.comboBox8.Location = new System.Drawing.Point(3, 313);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(158, 21);
-            this.comboBox8.TabIndex = 48;
+            this.legBoneBox.Location = new System.Drawing.Point(3, 313);
+            this.legBoneBox.Name = "legBoneBox";
+            this.legBoneBox.Size = new System.Drawing.Size(158, 21);
+            this.legBoneBox.TabIndex = 48;
             // 
-            // comboBox9
+            // nasalBoneList
             // 
-            this.comboBox9.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
+            this.nasalBoneList.BackColor = System.Drawing.SystemColors.Window;
+            this.nasalBoneList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nasalBoneList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nasalBoneList.FormattingEnabled = true;
+            this.nasalBoneList.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Not Assessed"});
-            this.comboBox9.Location = new System.Drawing.Point(167, 344);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(158, 21);
-            this.comboBox9.TabIndex = 49;
+            this.nasalBoneList.Location = new System.Drawing.Point(167, 344);
+            this.nasalBoneList.Name = "nasalBoneList";
+            this.nasalBoneList.Size = new System.Drawing.Size(158, 21);
+            this.nasalBoneList.TabIndex = 49;
             // 
-            // comboBox10
+            // bpdList
             // 
-            this.comboBox10.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
+            this.bpdList.BackColor = System.Drawing.SystemColors.Window;
+            this.bpdList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bpdList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bpdList.FormattingEnabled = true;
+            this.bpdList.Items.AddRange(new object[] {
+            "Not Assessed",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46",
+            "48",
+            "50",
+            "52",
+            "54",
+            "56",
+            "58",
+            "60"});
+            this.bpdList.Location = new System.Drawing.Point(167, 437);
+            this.bpdList.Name = "bpdList";
+            this.bpdList.Size = new System.Drawing.Size(158, 21);
+            this.bpdList.TabIndex = 50;
+            // 
+            // nuchalFoldList
+            // 
+            this.nuchalFoldList.BackColor = System.Drawing.SystemColors.Window;
+            this.nuchalFoldList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nuchalFoldList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nuchalFoldList.FormattingEnabled = true;
+            this.nuchalFoldList.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Not Assessed"});
-            this.comboBox10.Location = new System.Drawing.Point(167, 437);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(158, 21);
-            this.comboBox10.TabIndex = 50;
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.comboBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "Yes",
-            "No",
-            "Not Assessed"});
-            this.comboBox11.Location = new System.Drawing.Point(167, 468);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(158, 21);
-            this.comboBox11.TabIndex = 51;
+            this.nuchalFoldList.Location = new System.Drawing.Point(167, 468);
+            this.nuchalFoldList.Name = "nuchalFoldList";
+            this.nuchalFoldList.Size = new System.Drawing.Size(158, 21);
+            this.nuchalFoldList.TabIndex = 51;
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(167, 96);
             this.textBox1.Name = "textBox1";
@@ -618,34 +634,34 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label nuchalFoldRatio;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label legBoneRatio;
+        private System.Windows.Forms.Label nasalBoneRatio;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label hydronephrosisRatio;
+        private System.Windows.Forms.Label echogenicFocusRatio;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label echogenicBowelRatio;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label ventriculomegalyRatio;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox echogenicFocusList;
+        private System.Windows.Forms.ComboBox ventriculomegalyList;
+        private System.Windows.Forms.ComboBox echogenicBowelList;
+        private System.Windows.Forms.ComboBox hydronephrosisList;
+        private System.Windows.Forms.ComboBox legBoneList;
+        private System.Windows.Forms.ComboBox legBoneBox;
+        private System.Windows.Forms.ComboBox nasalBoneList;
+        private System.Windows.Forms.ComboBox bpdList;
+        private System.Windows.Forms.ComboBox nuchalFoldList;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
