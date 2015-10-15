@@ -40,7 +40,7 @@
             this.nuchalFoldLabel = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.legBoneLabel = new System.Windows.Forms.Label();
+            this.longBoneLabel = new System.Windows.Forms.Label();
             this.nasalBoneLabel = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.hydronephrosisLabel = new System.Windows.Forms.Label();
@@ -60,8 +60,8 @@
             this.ventriculomegalyList = new System.Windows.Forms.ComboBox();
             this.echogenicBowelList = new System.Windows.Forms.ComboBox();
             this.hydronephrosisList = new System.Windows.Forms.ComboBox();
-            this.legBoneList = new System.Windows.Forms.ComboBox();
-            this.legBoneBox = new System.Windows.Forms.ComboBox();
+            this.longBoneList = new System.Windows.Forms.ComboBox();
+            this.longBoneBox = new System.Windows.Forms.ComboBox();
             this.nasalBoneList = new System.Windows.Forms.ComboBox();
             this.bpdList = new System.Windows.Forms.ComboBox();
             this.nuchalFoldList = new System.Windows.Forms.ComboBox();
@@ -87,7 +87,7 @@
             this.tableLayoutPanel1.Controls.Add(this.nuchalFoldLabel, 2, 15);
             this.tableLayoutPanel1.Controls.Add(this.label19, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label18, 0, 15);
-            this.tableLayoutPanel1.Controls.Add(this.legBoneLabel, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.longBoneLabel, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.nasalBoneLabel, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.hydronephrosisLabel, 2, 9);
@@ -107,15 +107,15 @@
             this.tableLayoutPanel1.Controls.Add(this.ventriculomegalyList, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.echogenicBowelList, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.hydronephrosisList, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.legBoneList, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.legBoneBox, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.longBoneList, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.longBoneBox, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.nasalBoneList, 1, 11);
             this.tableLayoutPanel1.Controls.Add(this.bpdList, 1, 14);
             this.tableLayoutPanel1.Controls.Add(this.nuchalFoldList, 1, 15);
             this.tableLayoutPanel1.Controls.Add(this.ageRelatedRisk, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 18;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.263324F));
@@ -281,18 +281,18 @@
             this.label18.Text = "Nuchal fold thickness";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // legBoneLabel
+            // longBoneLabel
             // 
-            this.legBoneLabel.AutoSize = true;
-            this.legBoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.legBoneLabel.Location = new System.Drawing.Point(664, 520);
-            this.legBoneLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.legBoneLabel.Name = "legBoneLabel";
-            this.legBoneLabel.Size = new System.Drawing.Size(318, 52);
-            this.legBoneLabel.TabIndex = 16;
-            this.legBoneLabel.Text = "1";
-            this.legBoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.legBoneLabel.TextChanged += new System.EventHandler(this.UpdateLikelihoodRatio);
+            this.longBoneLabel.AutoSize = true;
+            this.longBoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.longBoneLabel.Location = new System.Drawing.Point(664, 520);
+            this.longBoneLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.longBoneLabel.Name = "longBoneLabel";
+            this.longBoneLabel.Size = new System.Drawing.Size(318, 52);
+            this.longBoneLabel.TabIndex = 16;
+            this.longBoneLabel.Text = "1";
+            this.longBoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.longBoneLabel.TextChanged += new System.EventHandler(this.UpdateLikelihoodRatio);
             // 
             // nasalBoneLabel
             // 
@@ -497,7 +497,7 @@
             "No",
             "Not Assessed"});
             this.echogenicFocusList.Location = new System.Drawing.Point(335, 318);
-            this.echogenicFocusList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.echogenicFocusList.Margin = new System.Windows.Forms.Padding(6);
             this.echogenicFocusList.Name = "echogenicFocusList";
             this.echogenicFocusList.Size = new System.Drawing.Size(317, 33);
             this.echogenicFocusList.TabIndex = 43;
@@ -514,7 +514,7 @@
             "No",
             "Not Assessed"});
             this.ventriculomegalyList.Location = new System.Drawing.Point(335, 370);
-            this.ventriculomegalyList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ventriculomegalyList.Margin = new System.Windows.Forms.Padding(6);
             this.ventriculomegalyList.Name = "ventriculomegalyList";
             this.ventriculomegalyList.Size = new System.Drawing.Size(317, 33);
             this.ventriculomegalyList.TabIndex = 44;
@@ -531,7 +531,7 @@
             "No",
             "Not Assessed"});
             this.echogenicBowelList.Location = new System.Drawing.Point(335, 422);
-            this.echogenicBowelList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.echogenicBowelList.Margin = new System.Windows.Forms.Padding(6);
             this.echogenicBowelList.Name = "echogenicBowelList";
             this.echogenicBowelList.Size = new System.Drawing.Size(317, 33);
             this.echogenicBowelList.TabIndex = 45;
@@ -548,42 +548,42 @@
             "No",
             "Not Assessed"});
             this.hydronephrosisList.Location = new System.Drawing.Point(335, 474);
-            this.hydronephrosisList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.hydronephrosisList.Margin = new System.Windows.Forms.Padding(6);
             this.hydronephrosisList.Name = "hydronephrosisList";
             this.hydronephrosisList.Size = new System.Drawing.Size(317, 33);
             this.hydronephrosisList.TabIndex = 46;
             this.hydronephrosisList.SelectedIndexChanged += new System.EventHandler(this.hydronephrosisList_SelectedIndexChanged);
             // 
-            // legBoneList
+            // longBoneList
             // 
-            this.legBoneList.BackColor = System.Drawing.SystemColors.Window;
-            this.legBoneList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.legBoneList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.legBoneList.FormattingEnabled = true;
-            this.legBoneList.Items.AddRange(new object[] {
+            this.longBoneList.BackColor = System.Drawing.SystemColors.Window;
+            this.longBoneList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.longBoneList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.longBoneList.FormattingEnabled = true;
+            this.longBoneList.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Not Assessed"});
-            this.legBoneList.Location = new System.Drawing.Point(335, 526);
-            this.legBoneList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.legBoneList.Name = "legBoneList";
-            this.legBoneList.Size = new System.Drawing.Size(317, 33);
-            this.legBoneList.TabIndex = 47;
+            this.longBoneList.Location = new System.Drawing.Point(335, 526);
+            this.longBoneList.Margin = new System.Windows.Forms.Padding(6);
+            this.longBoneList.Name = "longBoneList";
+            this.longBoneList.Size = new System.Drawing.Size(317, 33);
+            this.longBoneList.TabIndex = 47;
             // 
-            // legBoneBox
+            // longBoneBox
             // 
-            this.legBoneBox.BackColor = System.Drawing.SystemColors.Window;
-            this.legBoneBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.legBoneBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.legBoneBox.FormattingEnabled = true;
-            this.legBoneBox.Items.AddRange(new object[] {
+            this.longBoneBox.BackColor = System.Drawing.SystemColors.Window;
+            this.longBoneBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.longBoneBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.longBoneBox.FormattingEnabled = true;
+            this.longBoneBox.Items.AddRange(new object[] {
             "Short femur",
             "Short humerus"});
-            this.legBoneBox.Location = new System.Drawing.Point(6, 526);
-            this.legBoneBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.legBoneBox.Name = "legBoneBox";
-            this.legBoneBox.Size = new System.Drawing.Size(317, 33);
-            this.legBoneBox.TabIndex = 48;
+            this.longBoneBox.Location = new System.Drawing.Point(6, 526);
+            this.longBoneBox.Margin = new System.Windows.Forms.Padding(6);
+            this.longBoneBox.Name = "longBoneBox";
+            this.longBoneBox.Size = new System.Drawing.Size(317, 33);
+            this.longBoneBox.TabIndex = 48;
             // 
             // nasalBoneList
             // 
@@ -596,7 +596,7 @@
             "No",
             "Not Assessed"});
             this.nasalBoneList.Location = new System.Drawing.Point(335, 578);
-            this.nasalBoneList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nasalBoneList.Margin = new System.Windows.Forms.Padding(6);
             this.nasalBoneList.Name = "nasalBoneList";
             this.nasalBoneList.Size = new System.Drawing.Size(317, 33);
             this.nasalBoneList.TabIndex = 49;
@@ -628,7 +628,7 @@
             "58",
             "60"});
             this.bpdList.Location = new System.Drawing.Point(335, 734);
-            this.bpdList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bpdList.Margin = new System.Windows.Forms.Padding(6);
             this.bpdList.Name = "bpdList";
             this.bpdList.Size = new System.Drawing.Size(317, 33);
             this.bpdList.TabIndex = 50;
@@ -644,7 +644,7 @@
             "No",
             "Not Assessed"});
             this.nuchalFoldList.Location = new System.Drawing.Point(335, 786);
-            this.nuchalFoldList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nuchalFoldList.Margin = new System.Windows.Forms.Padding(6);
             this.nuchalFoldList.Name = "nuchalFoldList";
             this.nuchalFoldList.Size = new System.Drawing.Size(317, 33);
             this.nuchalFoldList.TabIndex = 51;
@@ -680,7 +680,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 1001);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Down Syndrome Markers";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -704,7 +704,7 @@
         private System.Windows.Forms.Label nuchalFoldLabel;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label legBoneLabel;
+        private System.Windows.Forms.Label longBoneLabel;
         private System.Windows.Forms.Label nasalBoneLabel;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label hydronephrosisLabel;
@@ -724,8 +724,8 @@
         private System.Windows.Forms.ComboBox ventriculomegalyList;
         private System.Windows.Forms.ComboBox echogenicBowelList;
         private System.Windows.Forms.ComboBox hydronephrosisList;
-        private System.Windows.Forms.ComboBox legBoneList;
-        private System.Windows.Forms.ComboBox legBoneBox;
+        private System.Windows.Forms.ComboBox longBoneList;
+        private System.Windows.Forms.ComboBox longBoneBox;
         private System.Windows.Forms.ComboBox nasalBoneList;
         private System.Windows.Forms.ComboBox bpdList;
         private System.Windows.Forms.ComboBox nuchalFoldList;

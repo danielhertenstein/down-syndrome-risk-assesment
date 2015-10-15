@@ -24,17 +24,17 @@ namespace down_syndrome_risk_assesment
             bpdList.SelectedItem = "Not Assessed";
             nuchalFoldList.SelectedItem = "Not Assessed";
 
-            legBoneList.SelectedItem = "Not Assessed";
-            legBoneBox.SelectedItem = "Short femur";
-            legBoneList.SelectedIndexChanged += legBoneList_SelectedIndexChanged;
-            legBoneBox.SelectedIndexChanged += legBoneBox_SelectedIndexChanged;
+            longBoneList.SelectedItem = "Not Assessed";
+            longBoneBox.SelectedItem = "Short femur";
+            longBoneList.SelectedIndexChanged += longBoneList_SelectedIndexChanged;
+            longBoneBox.SelectedIndexChanged += longBoneBox_SelectedIndexChanged;
         }
 
         double echogenicFocusRatio = 1;
         double ventriculomegalyRatio = 1;
         double echogenicBowelRatio = 1;
         double hydronephrosisRatio = 1;
-        double legBoneRatio = 1;
+        double longBoneRatio = 1;
         double nasalBoneRatio = 1;
 
         // All arrays must follow the pattern of { "Yes", "No", "Not Assessed" }
@@ -43,7 +43,8 @@ namespace down_syndrome_risk_assesment
         double[] ventriculomegalyRatios = { 27.52, 0.94, 1 };
         double[] echogenicBowelsRatios = { 11.44, 0.9, 1 };
         double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
-        double[,] legBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
+        double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
+        double[] nasalBoneRatios = { 23.27, 0.46, 1 };
 
         private void echogenicFocusList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -85,23 +86,23 @@ namespace down_syndrome_risk_assesment
             }
         }
 
-        private void legBoneList_SelectedIndexChanged(object sender, EventArgs e)
+        private void longBoneList_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
             if (comboBox != null)
             {
-                legBoneRatio = legBoneRatios[legBoneBox.SelectedIndex, comboBox.SelectedIndex];
-                legBoneLabel.Text = legBoneRatio.ToString();
+                longBoneRatio = longBoneRatios[longBoneBox.SelectedIndex, comboBox.SelectedIndex];
+                longBoneLabel.Text = longBoneRatio.ToString();
             }
         }
 
-        private void legBoneBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void longBoneBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox combobox = sender as ComboBox;
             if (combobox != null)
             {
-                legBoneRatio = legBoneRatios[combobox.SelectedIndex, legBoneList.SelectedIndex];
-                legBoneLabel.Text = legBoneRatio.ToString();
+                longBoneRatio = longBoneRatios[combobox.SelectedIndex, longBoneList.SelectedIndex];
+                longBoneLabel.Text = longBoneRatio.ToString();
             }
         }
 
@@ -110,18 +111,7 @@ namespace down_syndrome_risk_assesment
             ComboBox comboBox = sender as ComboBox;
             if (comboBox != null)
             {
-                switch (comboBox.SelectedItem.ToString())
-                {
-                    case "Yes":
-                        nasalBoneRatio = 23.27;
-                        break;
-                    case "No":
-                        nasalBoneRatio = 0.46;
-                        break;
-                    default:
-                        nasalBoneRatio = 1;
-                        break;
-                }
+                nasalBoneRatio = nasalBoneRatios[comboBox.SelectedIndex];
                 nasalBoneLabel.Text = nasalBoneRatio.ToString();
             }
         }
@@ -130,7 +120,7 @@ namespace down_syndrome_risk_assesment
         {
             double risk = ((double)ageRelatedRisk.Value / echogenicFocusRatio
                            / ventriculomegalyRatio / echogenicBowelRatio
-                           / hydronephrosisRatio / legBoneRatio
+                           / hydronephrosisRatio / longBoneRatio
                            / nasalBoneRatio);
             adjustedRisk.Text = risk.ToString("0.#####");
 
