@@ -237,5 +237,17 @@ namespace down_syndrome_risk_assesment
                 }
             }
         }
+
+        private void UpdateLikelihoodRatio(object sender, EventArgs e)
+        {
+            double risk = ((double)ageRelatedRisk.Value / echogenicFocusRatio
+                           / ventriculomegalyRatio / echogenicBowelRatio
+                           / hydronephrosisRatio / legBoneRatio
+                           / nasalBoneRatio);
+            adjustedRisk.Text = risk.ToString("0.#####");
+
+            double likelihood = (double)ageRelatedRisk.Value / risk;
+            likelihoodRatio.Text = likelihood.ToString("0.#####");
+        }
     }
 }
