@@ -118,13 +118,12 @@ namespace down_syndrome_risk_assesment
 
         private void UpdateLikelihoodRatio(object sender, EventArgs e)
         {
-            double risk = ((double)ageRelatedRisk.Value / echogenicFocusRatio
-                           / ventriculomegalyRatio / echogenicBowelRatio
-                           / hydronephrosisRatio / longBoneRatio
-                           / nasalBoneRatio);
-            adjustedRisk.Text = risk.ToString("0.#####");
+            double likelihood = (echogenicFocusRatio * ventriculomegalyRatio
+                                 * echogenicBowelRatio * hydronephrosisRatio
+                                 * longBoneRatio * nasalBoneRatio);
+            double risk = (double)ageRelatedRisk.Value / likelihood;
 
-            double likelihood = (double)ageRelatedRisk.Value / risk;
+            adjustedRisk.Text = risk.ToString("0.#####");
             likelihoodRatio.Text = likelihood.ToString("0.#####");
         }
     }
