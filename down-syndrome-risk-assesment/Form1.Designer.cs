@@ -37,19 +37,19 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.nuchalFoldRatio = new System.Windows.Forms.Label();
+            this.nuchalFoldLabel = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.legBoneRatio = new System.Windows.Forms.Label();
-            this.nasalBoneRatio = new System.Windows.Forms.Label();
+            this.legBoneLabel = new System.Windows.Forms.Label();
+            this.nasalBoneLabel = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.hydronephrosisRatio = new System.Windows.Forms.Label();
-            this.echogenicFocusRatio = new System.Windows.Forms.Label();
+            this.hydronephrosisLabel = new System.Windows.Forms.Label();
+            this.echogenicFocusLabel = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.echogenicBowelRatio = new System.Windows.Forms.Label();
+            this.echogenicBowelLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.ventriculomegalyRatio = new System.Windows.Forms.Label();
+            this.ventriculomegalyLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -83,19 +83,19 @@
             this.tableLayoutPanel1.Controls.Add(this.label25, 1, 13);
             this.tableLayoutPanel1.Controls.Add(this.label23, 2, 13);
             this.tableLayoutPanel1.Controls.Add(this.label21, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.nuchalFoldRatio, 2, 15);
+            this.tableLayoutPanel1.Controls.Add(this.nuchalFoldLabel, 2, 15);
             this.tableLayoutPanel1.Controls.Add(this.label19, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label18, 0, 15);
-            this.tableLayoutPanel1.Controls.Add(this.legBoneRatio, 2, 10);
-            this.tableLayoutPanel1.Controls.Add(this.nasalBoneRatio, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.legBoneLabel, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nasalBoneLabel, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.hydronephrosisRatio, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.echogenicFocusRatio, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.hydronephrosisLabel, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.echogenicFocusLabel, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.echogenicBowelRatio, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.echogenicBowelLabel, 2, 8);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.ventriculomegalyRatio, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.ventriculomegalyLabel, 2, 7);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label6, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
@@ -234,16 +234,16 @@
             this.label21.Text = "Marker";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // nuchalFoldRatio
+            // nuchalFoldLabel
             // 
-            this.nuchalFoldRatio.AutoSize = true;
-            this.nuchalFoldRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nuchalFoldRatio.Location = new System.Drawing.Point(331, 465);
-            this.nuchalFoldRatio.Name = "nuchalFoldRatio";
-            this.nuchalFoldRatio.Size = new System.Drawing.Size(160, 31);
-            this.nuchalFoldRatio.TabIndex = 19;
-            this.nuchalFoldRatio.Text = "1";
-            this.nuchalFoldRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nuchalFoldLabel.AutoSize = true;
+            this.nuchalFoldLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nuchalFoldLabel.Location = new System.Drawing.Point(331, 465);
+            this.nuchalFoldLabel.Name = "nuchalFoldLabel";
+            this.nuchalFoldLabel.Size = new System.Drawing.Size(160, 31);
+            this.nuchalFoldLabel.TabIndex = 19;
+            this.nuchalFoldLabel.Text = "1";
+            this.nuchalFoldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label19
             // 
@@ -267,27 +267,27 @@
             this.label18.Text = "Nuchal fold thickness";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // legBoneRatio
+            // legBoneLabel
             // 
-            this.legBoneRatio.AutoSize = true;
-            this.legBoneRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.legBoneRatio.Location = new System.Drawing.Point(331, 310);
-            this.legBoneRatio.Name = "legBoneRatio";
-            this.legBoneRatio.Size = new System.Drawing.Size(160, 31);
-            this.legBoneRatio.TabIndex = 16;
-            this.legBoneRatio.Text = "1";
-            this.legBoneRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.legBoneLabel.AutoSize = true;
+            this.legBoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.legBoneLabel.Location = new System.Drawing.Point(331, 310);
+            this.legBoneLabel.Name = "legBoneLabel";
+            this.legBoneLabel.Size = new System.Drawing.Size(160, 31);
+            this.legBoneLabel.TabIndex = 16;
+            this.legBoneLabel.Text = "1";
+            this.legBoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // nasalBoneRatio
+            // nasalBoneLabel
             // 
-            this.nasalBoneRatio.AutoSize = true;
-            this.nasalBoneRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nasalBoneRatio.Location = new System.Drawing.Point(331, 341);
-            this.nasalBoneRatio.Name = "nasalBoneRatio";
-            this.nasalBoneRatio.Size = new System.Drawing.Size(160, 31);
-            this.nasalBoneRatio.TabIndex = 15;
-            this.nasalBoneRatio.Text = "1";
-            this.nasalBoneRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nasalBoneLabel.AutoSize = true;
+            this.nasalBoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nasalBoneLabel.Location = new System.Drawing.Point(331, 341);
+            this.nasalBoneLabel.Name = "nasalBoneLabel";
+            this.nasalBoneLabel.Size = new System.Drawing.Size(160, 31);
+            this.nasalBoneLabel.TabIndex = 15;
+            this.nasalBoneLabel.Text = "1";
+            this.nasalBoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label15
             // 
@@ -300,27 +300,27 @@
             this.label15.Text = "Absent or hypoplastic NB";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // hydronephrosisRatio
+            // hydronephrosisLabel
             // 
-            this.hydronephrosisRatio.AutoSize = true;
-            this.hydronephrosisRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hydronephrosisRatio.Location = new System.Drawing.Point(331, 279);
-            this.hydronephrosisRatio.Name = "hydronephrosisRatio";
-            this.hydronephrosisRatio.Size = new System.Drawing.Size(160, 31);
-            this.hydronephrosisRatio.TabIndex = 13;
-            this.hydronephrosisRatio.Text = "1";
-            this.hydronephrosisRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hydronephrosisLabel.AutoSize = true;
+            this.hydronephrosisLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hydronephrosisLabel.Location = new System.Drawing.Point(331, 279);
+            this.hydronephrosisLabel.Name = "hydronephrosisLabel";
+            this.hydronephrosisLabel.Size = new System.Drawing.Size(160, 31);
+            this.hydronephrosisLabel.TabIndex = 13;
+            this.hydronephrosisLabel.Text = "1";
+            this.hydronephrosisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // echogenicFocusRatio
+            // echogenicFocusLabel
             // 
-            this.echogenicFocusRatio.AutoSize = true;
-            this.echogenicFocusRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.echogenicFocusRatio.Location = new System.Drawing.Point(331, 186);
-            this.echogenicFocusRatio.Name = "echogenicFocusRatio";
-            this.echogenicFocusRatio.Size = new System.Drawing.Size(160, 31);
-            this.echogenicFocusRatio.TabIndex = 12;
-            this.echogenicFocusRatio.Text = "1";
-            this.echogenicFocusRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.echogenicFocusLabel.AutoSize = true;
+            this.echogenicFocusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.echogenicFocusLabel.Location = new System.Drawing.Point(331, 186);
+            this.echogenicFocusLabel.Name = "echogenicFocusLabel";
+            this.echogenicFocusLabel.Size = new System.Drawing.Size(160, 31);
+            this.echogenicFocusLabel.TabIndex = 12;
+            this.echogenicFocusLabel.Text = "1";
+            this.echogenicFocusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
@@ -333,16 +333,16 @@
             this.label12.Text = "Mild hydronephrosis";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // echogenicBowelRatio
+            // echogenicBowelLabel
             // 
-            this.echogenicBowelRatio.AutoSize = true;
-            this.echogenicBowelRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.echogenicBowelRatio.Location = new System.Drawing.Point(331, 248);
-            this.echogenicBowelRatio.Name = "echogenicBowelRatio";
-            this.echogenicBowelRatio.Size = new System.Drawing.Size(160, 31);
-            this.echogenicBowelRatio.TabIndex = 10;
-            this.echogenicBowelRatio.Text = "1";
-            this.echogenicBowelRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.echogenicBowelLabel.AutoSize = true;
+            this.echogenicBowelLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.echogenicBowelLabel.Location = new System.Drawing.Point(331, 248);
+            this.echogenicBowelLabel.Name = "echogenicBowelLabel";
+            this.echogenicBowelLabel.Size = new System.Drawing.Size(160, 31);
+            this.echogenicBowelLabel.TabIndex = 10;
+            this.echogenicBowelLabel.Text = "1";
+            this.echogenicBowelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -366,16 +366,16 @@
             this.label9.Text = "Echogenic bowel";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ventriculomegalyRatio
+            // ventriculomegalyLabel
             // 
-            this.ventriculomegalyRatio.AutoSize = true;
-            this.ventriculomegalyRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ventriculomegalyRatio.Location = new System.Drawing.Point(331, 217);
-            this.ventriculomegalyRatio.Name = "ventriculomegalyRatio";
-            this.ventriculomegalyRatio.Size = new System.Drawing.Size(160, 31);
-            this.ventriculomegalyRatio.TabIndex = 7;
-            this.ventriculomegalyRatio.Text = "1";
-            this.ventriculomegalyRatio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ventriculomegalyLabel.AutoSize = true;
+            this.ventriculomegalyLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ventriculomegalyLabel.Location = new System.Drawing.Point(331, 217);
+            this.ventriculomegalyLabel.Name = "ventriculomegalyLabel";
+            this.ventriculomegalyLabel.Size = new System.Drawing.Size(160, 31);
+            this.ventriculomegalyLabel.TabIndex = 7;
+            this.ventriculomegalyLabel.Text = "1";
+            this.ventriculomegalyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
             // 
@@ -464,6 +464,7 @@
             this.echogenicFocusList.Name = "echogenicFocusList";
             this.echogenicFocusList.Size = new System.Drawing.Size(158, 21);
             this.echogenicFocusList.TabIndex = 43;
+            this.echogenicFocusList.SelectedIndexChanged += new System.EventHandler(this.echogenicFocusList_SelectedIndexChanged);
             // 
             // ventriculomegalyList
             // 
@@ -479,6 +480,7 @@
             this.ventriculomegalyList.Name = "ventriculomegalyList";
             this.ventriculomegalyList.Size = new System.Drawing.Size(158, 21);
             this.ventriculomegalyList.TabIndex = 44;
+            this.ventriculomegalyList.SelectedIndexChanged += new System.EventHandler(this.ventriculomegalyList_SelectedIndexChanged);
             // 
             // echogenicBowelList
             // 
@@ -494,6 +496,7 @@
             this.echogenicBowelList.Name = "echogenicBowelList";
             this.echogenicBowelList.Size = new System.Drawing.Size(158, 21);
             this.echogenicBowelList.TabIndex = 45;
+            this.echogenicBowelList.SelectedIndexChanged += new System.EventHandler(this.echogenicBowelList_SelectedIndexChanged);
             // 
             // hydronephrosisList
             // 
@@ -509,6 +512,7 @@
             this.hydronephrosisList.Name = "hydronephrosisList";
             this.hydronephrosisList.Size = new System.Drawing.Size(158, 21);
             this.hydronephrosisList.TabIndex = 46;
+            this.hydronephrosisList.SelectedIndexChanged += new System.EventHandler(this.hydronephrosisList_SelectedIndexChanged);
             // 
             // legBoneList
             // 
@@ -524,6 +528,7 @@
             this.legBoneList.Name = "legBoneList";
             this.legBoneList.Size = new System.Drawing.Size(158, 21);
             this.legBoneList.TabIndex = 47;
+            this.legBoneList.SelectedIndexChanged += new System.EventHandler(this.legBoneList_SelectedIndexChanged);
             // 
             // legBoneBox
             // 
@@ -538,6 +543,7 @@
             this.legBoneBox.Name = "legBoneBox";
             this.legBoneBox.Size = new System.Drawing.Size(158, 21);
             this.legBoneBox.TabIndex = 48;
+            this.legBoneBox.SelectedIndexChanged += new System.EventHandler(this.legBoneBox_SelectedIndexChanged);
             // 
             // nasalBoneList
             // 
@@ -553,6 +559,7 @@
             this.nasalBoneList.Name = "nasalBoneList";
             this.nasalBoneList.Size = new System.Drawing.Size(158, 21);
             this.nasalBoneList.TabIndex = 49;
+            this.nasalBoneList.SelectedIndexChanged += new System.EventHandler(this.nasalBoneList_SelectedIndexChanged);
             // 
             // bpdList
             // 
@@ -634,19 +641,19 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label nuchalFoldRatio;
+        private System.Windows.Forms.Label nuchalFoldLabel;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label legBoneRatio;
-        private System.Windows.Forms.Label nasalBoneRatio;
+        private System.Windows.Forms.Label legBoneLabel;
+        private System.Windows.Forms.Label nasalBoneLabel;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label hydronephrosisRatio;
-        private System.Windows.Forms.Label echogenicFocusRatio;
+        private System.Windows.Forms.Label hydronephrosisLabel;
+        private System.Windows.Forms.Label echogenicFocusLabel;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label echogenicBowelRatio;
+        private System.Windows.Forms.Label echogenicBowelLabel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label ventriculomegalyRatio;
+        private System.Windows.Forms.Label ventriculomegalyLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
