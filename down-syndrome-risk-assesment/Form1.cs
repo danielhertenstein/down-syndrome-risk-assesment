@@ -44,6 +44,7 @@ namespace down_syndrome_risk_assesment
         double[] echogenicBowelsRatios = { 11.44, 0.9, 1 };
         double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
         double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
+        double[] nasalBoneRatios = { 23.27, 0.46, 1 };
 
         private void echogenicFocusList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -110,18 +111,7 @@ namespace down_syndrome_risk_assesment
             ComboBox comboBox = sender as ComboBox;
             if (comboBox != null)
             {
-                switch (comboBox.SelectedItem.ToString())
-                {
-                    case "Yes":
-                        nasalBoneRatio = 23.27;
-                        break;
-                    case "No":
-                        nasalBoneRatio = 0.46;
-                        break;
-                    default:
-                        nasalBoneRatio = 1;
-                        break;
-                }
+                nasalBoneRatio = nasalBoneRatios[comboBox.SelectedIndex];
                 nasalBoneLabel.Text = nasalBoneRatio.ToString();
             }
         }
