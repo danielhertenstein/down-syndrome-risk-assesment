@@ -36,6 +36,7 @@ namespace down_syndrome_risk_assesment
         double hydronephrosisRatio = 1;
         double longBoneRatio = 1;
         double nasalBoneRatio = 1;
+        double nuchalFoldRatio = 1;
 
         // All arrays must follow the pattern of { "Yes", "No", "Not Assessed" }
         // to mirror the pattern used by the DropDownLists.
@@ -49,17 +50,17 @@ namespace down_syndrome_risk_assesment
         // The BPD list of options starts at 28, goes by twos up to 60, then ends with "Not Assessed".
         double[,] nuchalFoldRatios = new double[18, 8]
         {
-            { 0.41, 0.44, 0.72, 2.75, 17.78, -1, -1, 1 },
-            { 0.4, 0.43, 0.63, 2.11, 13.02, -1, -1, 1 },
-            { 0.4, 0.42, 0.57, 1.64, 9.57, -1, -1, 1 },
-            { 0.4, 0.42, 0.52, 1.3, 7.06, -1, -1, 1 },
-            { 0.4, 0.41, 0.49, 1.05, 5.23, -1, -1, 1 },
-            { 0.4, 0.41, 0.46, 0.87, 3.91, 26.33, -1, 1 },
-            { 0.4, 0.41, 0.45, 0.74, 2.95, 19.23, -1, 1 },
-            { 0.4, 0.4, 0.43, 0.65, 2.25, 14.07, -1, 1 },
-            { 0.4, 0.4, 0.42, 0.58, 1.74, 10.33, -1, 1 },
-            { 0.4, 0.4, 0.42, 0.53, 1.38, 7.61, -1, 1 },
-            { 0.4, 0.4, 0.41, 0.5, 1.11, 5.64, -1, 1 },
+            { 0.41, 0.44, 0.72, 2.75, 17.78, 1, -1, -1 },
+            { 0.4, 0.43, 0.63, 2.11, 13.02, 1, -1, -1 },
+            { 0.4, 0.42, 0.57, 1.64, 9.57, 1, -1, -1 },
+            { 0.4, 0.42, 0.52, 1.3, 7.06, 1, -1, -1 },
+            { 0.4, 0.41, 0.49, 1.05, 5.23, 1, -1, -1 },
+            { 0.4, 0.41, 0.46, 0.87, 3.91, 26.33, 1, -1 },
+            { 0.4, 0.41, 0.45, 0.74, 2.95, 19.23, 1, -1 },
+            { 0.4, 0.4, 0.43, 0.65, 2.25, 14.07, 1, -1 },
+            { 0.4, 0.4, 0.42, 0.58, 1.74, 10.33, 1, -1 },
+            { 0.4, 0.4, 0.42, 0.53, 1.38, 7.61, 1, -1 },
+            { 0.4, 0.4, 0.41, 0.5, 1.11, 5.64, 1, -1 },
             { 0.4, 0.4, 0.41, 0.47, 0.91, 4.2, 28.49, 1 },
             { 0.4, 0.4, 0.41, 0.45, 0.77, 3.16, 20.8, 1 },
             { 0.4, 0.4, 0.4, 0.44, 0.67, 2.4, 15.21, 1 },
@@ -164,7 +165,8 @@ namespace down_syndrome_risk_assesment
         {
             double likelihood = (echogenicFocusRatio * ventriculomegalyRatio
                                  * echogenicBowelRatio * hydronephrosisRatio
-                                 * longBoneRatio * nasalBoneRatio);
+                                 * longBoneRatio * nasalBoneRatio
+                                 * nuchalFoldRatio);
             double risk = (double)ageRelatedRisk.Value / likelihood;
 
             adjustedRisk.Text = risk.ToString("0.#####");
@@ -174,6 +176,16 @@ namespace down_syndrome_risk_assesment
         private void UpdateNuchalFoldOptions(object sender, EventArgs e)
         {
             nuchalFoldList.DataSource = nuchalFoldOptions[bpdList.SelectedIndex];
+        }
+
+        private void nuchalFoldList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox combobox = sender as ComboBox;
+            if (combobox != null)
+            {
+                nuchalFoldRatio = nuchalFoldRatios[bpdList.SelectedIndex, nuchalFoldList.SelectedIndex];
+                nuchalFoldLabel.Text = nuchalFoldRatio.ToString();
+            }
         }
     }
 }

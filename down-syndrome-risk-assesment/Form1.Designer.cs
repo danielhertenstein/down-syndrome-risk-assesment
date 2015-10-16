@@ -612,6 +612,7 @@
             this.nuchalFoldList.Name = "nuchalFoldList";
             this.nuchalFoldList.Size = new System.Drawing.Size(158, 21);
             this.nuchalFoldList.TabIndex = 51;
+            this.nuchalFoldList.SelectedIndexChanged += new System.EventHandler(this.nuchalFoldList_SelectedIndexChanged);
             // 
             // ageRelatedRisk
             // 
