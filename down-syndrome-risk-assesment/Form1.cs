@@ -45,26 +45,49 @@ namespace down_syndrome_risk_assesment
         double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
         double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
         double[] nasalBoneRatios = { 23.27, 0.46, 1 };
+
+        // The BPD list of options starts at 28, goes by twos up to 60, then ends with "Not Assessed".
         double[,] nuchalFoldRatios = new double[18, 8]
         {
-            {  },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
-            { },
+            { 0.41, 0.44, 0.72, 2.75, 17.78, -1, -1, 1 },
+            { 0.4, 0.43, 0.63, 2.11, 13.02, -1, -1, 1 },
+            { 0.4, 0.42, 0.57, 1.64, 9.57, -1, -1, 1 },
+            { 0.4, 0.42, 0.52, 1.3, 7.06, -1, -1, 1 },
+            { 0.4, 0.41, 0.49, 1.05, 5.23, -1, -1, 1 },
+            { 0.4, 0.41, 0.46, 0.87, 3.91, 26.33, -1, 1 },
+            { 0.4, 0.41, 0.45, 0.74, 2.95, 19.23, -1, 1 },
+            { 0.4, 0.4, 0.43, 0.65, 2.25, 14.07, -1, 1 },
+            { 0.4, 0.4, 0.42, 0.58, 1.74, 10.33, -1, 1 },
+            { 0.4, 0.4, 0.42, 0.53, 1.38, 7.61, -1, 1 },
+            { 0.4, 0.4, 0.41, 0.5, 1.11, 5.64, -1, 1 },
+            { 0.4, 0.4, 0.41, 0.47, 0.91, 4.2, 28.49, 1 },
+            { 0.4, 0.4, 0.41, 0.45, 0.77, 3.16, 20.8, 1 },
+            { 0.4, 0.4, 0.4, 0.44, 0.67, 2.4, 15.21, 1 },
+            { 0.4, 0.4, 0.4, 0.43, 0.6, 1.86, 11.16, 1 },
+            { 0.4, 0.4, 0.4, 0.42, 0.54, 1.46, 8.21, 1 },
+            { 0.4, 0.4, 0.4, 0.41, 0.5, 1.17, 6.07, 1 },
+            { 1, 1, 1, 1, 1, 1, 1, 1 },
+        };
+        List<List<string>> nuchalFoldOptions = new List<List<string>>()
+        {
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "≥7 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "≥7 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "≥7 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "≥7 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "≥7 mm", "Not Assessed" },
+            new List<string>() { "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "≥7 mm", "Not Assessed" },
+            new List<string>() { "Not Assessed" },
         };
 
         private void echogenicFocusList_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,6 +169,11 @@ namespace down_syndrome_risk_assesment
 
             adjustedRisk.Text = risk.ToString("0.#####");
             likelihoodRatio.Text = likelihood.ToString("0.#####");
+        }
+
+        private void UpdateNuchalFoldOptions(object sender, EventArgs e)
+        {
+            nuchalFoldList.DataSource = nuchalFoldOptions[bpdList.SelectedIndex];
         }
     }
 }
