@@ -22,7 +22,7 @@ namespace down_syndrome_risk_assesment
             hydronephrosisList.SelectedItem = "Not Assessed";
             nasalBoneList.SelectedItem = "Not Assessed";
             bpdList.SelectedItem = "Not Assessed";
-            nuchalFoldList.SelectedItem = "Not Assessed";
+            currentNuchalFoldIndex = nuchalFoldList.SelectedIndex;
 
             longBoneList.SelectedItem = "Not Assessed";
             longBoneBox.SelectedItem = "Short femur";
@@ -47,9 +47,14 @@ namespace down_syndrome_risk_assesment
         double[,] longBoneRatios = new double[2, 3] { { 1, 3.72, 0.8 }, { 1, 4.81, 0.74 } };
         double[] nasalBoneRatios = { 1, 23.27, 0.46 };
 
+        // Need to keep track of currently selected nuchal fold thickness index for better 
+        // switching of nucal fold thickness lists.
+        int currentNuchalFoldIndex;
+
         // The BPD list of options starts with "Not Assessed" and then goes by twos from 28 to 60.
         double[,] nuchalFoldRatios = new double[18, 8]
         {
+            { 1, -1, -1, -1, -1, -1, -1, -1 },
             { 1, 0.41, 0.44, 0.72, 2.75, 17.78, -1, -1 },
             { 1, 0.4, 0.43, 0.63, 2.11, 13.02, -1, -1 },
             { 1, 0.4, 0.42, 0.57, 1.64, 9.57, -1, -1 },
@@ -67,7 +72,6 @@ namespace down_syndrome_risk_assesment
             { 1, 0.4, 0.4, 0.4, 0.43, 0.6, 1.86, 11.16 },
             { 1, 0.4, 0.4, 0.4, 0.42, 0.54, 1.46, 8.21 },
             { 1, 0.4, 0.4, 0.4, 0.41, 0.5, 1.17, 6.07 },
-            { 1, 1, 1, 1, 1, 1, 1, 1 },
         };
         List<List<string>> nuchalFoldOptions = new List<List<string>>()
         {
@@ -175,7 +179,16 @@ namespace down_syndrome_risk_assesment
 
         private void UpdateNuchalFoldOptions(object sender, EventArgs e)
         {
+            currentNuchalFoldIndex = nuchalFoldList.SelectedIndex;
             nuchalFoldList.DataSource = nuchalFoldOptions[bpdList.SelectedIndex];
+            try
+            {
+                nuchalFoldList.SelectedIndex = currentNuchalFoldIndex;
+            }
+            catch (Exception ex) when (ex is IndexOutOfRangeException || ex is ArgumentOutOfRangeException)
+            {
+                nuchalFoldList.SelectedIndex = 0;
+            }
         }
 
         private void nuchalFoldList_SelectedIndexChanged(object sender, EventArgs e)
