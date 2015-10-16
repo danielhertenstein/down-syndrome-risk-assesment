@@ -609,7 +609,6 @@
             this.bpdList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bpdList.FormattingEnabled = true;
             this.bpdList.Items.AddRange(new object[] {
-            "Not Assessed",
             "28",
             "30",
             "32",
@@ -626,7 +625,8 @@
             "54",
             "56",
             "58",
-            "60"});
+            "60",
+            "Not Assessed"});
             this.bpdList.Location = new System.Drawing.Point(335, 734);
             this.bpdList.Margin = new System.Windows.Forms.Padding(6);
             this.bpdList.Name = "bpdList";

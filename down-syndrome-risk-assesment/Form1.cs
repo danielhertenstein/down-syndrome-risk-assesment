@@ -45,6 +45,27 @@ namespace down_syndrome_risk_assesment
         double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
         double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
         double[] nasalBoneRatios = { 23.27, 0.46, 1 };
+        double[,] nuchalFoldRatios = new double[18, 8]
+        {
+            {  },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+            { },
+        };
 
         private void echogenicFocusList_SelectedIndexChanged(object sender, EventArgs e)
         {
