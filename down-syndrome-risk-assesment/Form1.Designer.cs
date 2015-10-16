@@ -410,7 +410,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 30);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Yes / No / Not Assessed";
+            this.label7.Text = "Not Assessed / Yes / No";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
