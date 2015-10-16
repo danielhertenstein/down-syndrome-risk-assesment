@@ -465,9 +465,9 @@
             this.echogenicFocusList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.echogenicFocusList.FormattingEnabled = true;
             this.echogenicFocusList.Items.AddRange(new object[] {
+            "Not Assessed",
             "Yes",
-            "No",
-            "Not Assessed"});
+            "No"});
             this.echogenicFocusList.Location = new System.Drawing.Point(167, 165);
             this.echogenicFocusList.Name = "echogenicFocusList";
             this.echogenicFocusList.Size = new System.Drawing.Size(158, 21);
@@ -481,9 +481,9 @@
             this.ventriculomegalyList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ventriculomegalyList.FormattingEnabled = true;
             this.ventriculomegalyList.Items.AddRange(new object[] {
+            "Not Assessed",
             "Yes",
-            "No",
-            "Not Assessed"});
+            "No"});
             this.ventriculomegalyList.Location = new System.Drawing.Point(167, 192);
             this.ventriculomegalyList.Name = "ventriculomegalyList";
             this.ventriculomegalyList.Size = new System.Drawing.Size(158, 21);
@@ -497,9 +497,9 @@
             this.echogenicBowelList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.echogenicBowelList.FormattingEnabled = true;
             this.echogenicBowelList.Items.AddRange(new object[] {
+            "Not Assessed",
             "Yes",
-            "No",
-            "Not Assessed"});
+            "No"});
             this.echogenicBowelList.Location = new System.Drawing.Point(167, 219);
             this.echogenicBowelList.Name = "echogenicBowelList";
             this.echogenicBowelList.Size = new System.Drawing.Size(158, 21);
@@ -513,9 +513,9 @@
             this.hydronephrosisList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hydronephrosisList.FormattingEnabled = true;
             this.hydronephrosisList.Items.AddRange(new object[] {
+            "Not Assessed",
             "Yes",
-            "No",
-            "Not Assessed"});
+            "No"});
             this.hydronephrosisList.Location = new System.Drawing.Point(167, 246);
             this.hydronephrosisList.Name = "hydronephrosisList";
             this.hydronephrosisList.Size = new System.Drawing.Size(158, 21);
@@ -529,9 +529,9 @@
             this.longBoneList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.longBoneList.FormattingEnabled = true;
             this.longBoneList.Items.AddRange(new object[] {
+            "Not Assessed",
             "Yes",
-            "No",
-            "Not Assessed"});
+            "No"});
             this.longBoneList.Location = new System.Drawing.Point(167, 273);
             this.longBoneList.Name = "longBoneList";
             this.longBoneList.Size = new System.Drawing.Size(158, 21);
@@ -558,9 +558,9 @@
             this.nasalBoneList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nasalBoneList.FormattingEnabled = true;
             this.nasalBoneList.Items.AddRange(new object[] {
+            "Not Assessed",
             "Yes",
-            "No",
-            "Not Assessed"});
+            "No"});
             this.nasalBoneList.Location = new System.Drawing.Point(167, 300);
             this.nasalBoneList.Name = "nasalBoneList";
             this.nasalBoneList.Size = new System.Drawing.Size(158, 21);
@@ -574,6 +574,7 @@
             this.bpdList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bpdList.FormattingEnabled = true;
             this.bpdList.Items.AddRange(new object[] {
+            "Not Assessed",
             "28",
             "30",
             "32",
@@ -590,8 +591,7 @@
             "54",
             "56",
             "58",
-            "60",
-            "Not Assessed"});
+            "60"});
             this.bpdList.Location = new System.Drawing.Point(167, 381);
             this.bpdList.Name = "bpdList";
             this.bpdList.Size = new System.Drawing.Size(158, 21);
