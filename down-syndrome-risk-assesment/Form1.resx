@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Instructions: First, enter the a priori risk in the top box. Then, select the proper assessments for each marker using the dropdown lists. You can switch between using a short femur marker and a short humerus marker.</value>
+  </data>
 </root>
