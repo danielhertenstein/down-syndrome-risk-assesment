@@ -644,7 +644,7 @@
             this.ageRelatedRisk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ageRelatedRisk.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageRelatedRisk.Location = new System.Drawing.Point(157, 128);
-            this.ageRelatedRisk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ageRelatedRisk.Margin = new System.Windows.Forms.Padding(2);
             this.ageRelatedRisk.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -672,6 +672,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 604);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Down Syndrome Markers";
             this.tableLayoutPanel1.ResumeLayout(false);
