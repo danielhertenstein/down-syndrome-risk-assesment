@@ -14,25 +14,25 @@
         <Label x:Name="label" Content="a priori risk (1/N):" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="112" FontWeight="Bold"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="127,14,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Right"/>
         <Label x:Name="label1" Content="Intracardiac echogenic focus:" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Height="26" Width="163"/>
-        <RadioButton x:Name="radioButton" GroupName="EchogenicFocus" Content="Yes" HorizontalAlignment="Left" Margin="51,143,0,0" VerticalAlignment="Top" Height="15" Width="37"/>
-        <RadioButton x:Name="radioButton_Copy" GroupName="EchogenicFocus" Content="No" HorizontalAlignment="Left" Margin="125,143,0,0" VerticalAlignment="Top" Height="15" Width="35"/>
-        <RadioButton x:Name="radioButton_Copy1" GroupName="EchogenicFocus" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,143,0,0" VerticalAlignment="Top" Height="15" Width="90" IsChecked="True"/>
+        <RadioButton x:Name="echogenicFocusYes" GroupName="EchogenicFocus" Content="Yes" HorizontalAlignment="Left" Margin="51,143,0,0" VerticalAlignment="Top" Height="15" Width="37" Checked="UpdateEchogenicFocusRatio"/>
+        <RadioButton x:Name="echogenicFocusNo" GroupName="EchogenicFocus" Content="No" HorizontalAlignment="Left" Margin="125,143,0,0" VerticalAlignment="Top" Height="15" Width="35" Checked="UpdateEchogenicFocusRatio"/>
+        <RadioButton x:Name="echogenicFocusNotAssessed" GroupName="EchogenicFocus" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,143,0,0" VerticalAlignment="Top" Height="15" Width="90" Checked="UpdateEchogenicFocusRatio"/>
         <Label x:Name="label2" Content="Sonographic Findings" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" FontSize="14.667" Foreground="#FF003399" Height="30" Width="150"/>
         <Label x:Name="label2_Copy" Content="Likelihood Ratios" HorizontalAlignment="Left" Margin="10,77,-21,0" VerticalAlignment="Top" FontSize="14.667" Foreground="#FF003399" Height="30" Width="150" Grid.Column="1"/>
-        <Label x:Name="label1_Copy" Content="1" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
+        <Label x:Name="echogenicFocusRatioLabel" Content="1" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
         <Label x:Name="label1_Copy1" Content="Echogenic bowel:" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Height="26" Width="163"/>
         <RadioButton x:Name="radioButton_Copy2" GroupName="EchogenicBowel" Content="Yes" HorizontalAlignment="Left" Margin="51,245,0,0" VerticalAlignment="Top" Height="15" Width="37"/>
-        <RadioButton x:Name="radioButton_Copy3" GroupName="EchogenicBowel" Content="No" HorizontalAlignment="Left" Margin="125,245,0,0" VerticalAlignment="Top" Height="15" Width="35" IsChecked="True"/>
+        <RadioButton x:Name="radioButton_Copy3" GroupName="EchogenicBowel" Content="No" HorizontalAlignment="Left" Margin="125,245,0,0" VerticalAlignment="Top" Height="15" Width="35"/>
         <RadioButton x:Name="radioButton_Copy4" GroupName="EchogenicBowel" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,245,0,0" VerticalAlignment="Top" Height="15" Width="90"/>
-        <Label x:Name="label1_Copy2" Content="0.9" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
+        <Label x:Name="label1_Copy2" Content="1" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
         <Label x:Name="label1_Copy3" Content="Mild hydronephrosis:" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" Height="26" Width="163"/>
         <RadioButton x:Name="radioButton_Copy5" GroupName="Hydronephrosis" Content="Yes" HorizontalAlignment="Left" Margin="51,296,0,0" VerticalAlignment="Top" Height="15" Width="37"/>
         <RadioButton x:Name="radioButton_Copy6" GroupName="Hydronephrosis" Content="No" HorizontalAlignment="Left" Margin="125,296,0,0" VerticalAlignment="Top" Height="15" Width="35"/>
-        <RadioButton x:Name="radioButton_Copy7" GroupName="Hydronephrosis" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,296,0,0" VerticalAlignment="Top" Height="15" Width="90" IsChecked="True"/>
+        <RadioButton x:Name="radioButton_Copy7" GroupName="Hydronephrosis" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,296,0,0" VerticalAlignment="Top" Height="15" Width="90"/>
         <Label x:Name="label1_Copy4" Content="1" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
         <RadioButton x:Name="radioButton_Copy8" GroupName="LongBone" Content="Yes" HorizontalAlignment="Left" Margin="51,347,0,0" VerticalAlignment="Top" Height="15" Width="37"/>
         <RadioButton x:Name="radioButton_Copy9" GroupName="LongBone" Content="No" HorizontalAlignment="Left" Margin="125,347,0,0" VerticalAlignment="Top" Height="15" Width="35"/>
-        <RadioButton x:Name="radioButton_Copy10" GroupName="LongBone" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,347,0,0" VerticalAlignment="Top" Height="15" Width="90" IsChecked="True"/>
+        <RadioButton x:Name="radioButton_Copy10" GroupName="LongBone" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,347,0,0" VerticalAlignment="Top" Height="15" Width="90"/>
         <Label x:Name="label1_Copy6" Content="1" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
             <ComboBoxItem Content="Short Femur"/>
@@ -41,7 +41,7 @@
         <Label x:Name="label1_Copy5" Content="Absent or hypoplastic NB:" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Height="26" Width="163"/>
         <RadioButton x:Name="radioButton_Copy11" GroupName="NasalBone" Content="Yes" HorizontalAlignment="Left" Margin="51,398,0,0" VerticalAlignment="Top" Height="15" Width="37"/>
         <RadioButton x:Name="radioButton_Copy12" GroupName="NasalBone" Content="No" HorizontalAlignment="Left" Margin="125,398,0,0" VerticalAlignment="Top" Height="15" Width="35"/>
-        <RadioButton x:Name="radioButton_Copy13" GroupName="NasalBone" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,398,0,0" VerticalAlignment="Top" Height="15" Width="90" IsChecked="True"/>
+        <RadioButton x:Name="radioButton_Copy13" GroupName="NasalBone" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,398,0,0" VerticalAlignment="Top" Height="15" Width="90"/>
         <Label x:Name="label1_Copy7" Content="1" HorizontalAlignment="Left" Margin="10,392,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
         <Separator HorizontalAlignment="Left" Height="2" Margin="85,282,-81,0" VerticalAlignment="Top" Width="458" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <Separator.RenderTransform>
@@ -54,7 +54,7 @@
             </Separator.RenderTransform>
         </Separator>
         <Label x:Name="label3" Content="BPD:" HorizontalAlignment="Left" Margin="10,418,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="10,449,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="1">
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="10,449,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
             <ComboBoxItem Content="Not Assessed"/>
             <ComboBoxItem Content="28"/>
             <ComboBoxItem Content="30"/>
@@ -75,7 +75,7 @@
             <ComboBoxItem Content="60"/>
         </ComboBox>
         <Label x:Name="label3_Copy" Content="Nuchal Fold Thickness:" HorizontalAlignment="Left" Margin="156,418,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox1_Copy" HorizontalAlignment="Left" Margin="166,449,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="2">
+        <ComboBox x:Name="comboBox1_Copy" HorizontalAlignment="Left" Margin="166,449,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
             <ComboBoxItem Content="Not Assessed"/>
             <ComboBoxItem Content="1-1.9 mm"/>
             <ComboBoxItem Content="2-2.9 mm"/>
@@ -83,17 +83,17 @@
             <ComboBoxItem Content="4-4.9 mm"/>
             <ComboBoxItem Content="5-5.9 mm"/>
         </ComboBox>
-        <Label x:Name="label1_Copy8" Content="0.44" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
+        <Label x:Name="label1_Copy8" Content="0" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
         <Label x:Name="label1_Copy9" Content="Ventriculomegaly:" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top" Height="26" Width="163"/>
-        <RadioButton x:Name="radioButton_Copy14" GroupName="Ventriculomegaly" Content="Yes" HorizontalAlignment="Left" Margin="51,194,0,0" VerticalAlignment="Top" Height="15" Width="37" IsChecked="True"/>
-        <RadioButton x:Name="radioButton_Copy15" GroupName="Ventriculomegaly" Content="No" HorizontalAlignment="Left" Margin="125,194,0,0" VerticalAlignment="Top" Height="15" Width="35"/>
-        <RadioButton x:Name="radioButton_Copy16" GroupName="Ventriculomegaly" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,194,0,0" VerticalAlignment="Top" Height="15" Width="90"/>
-        <Label x:Name="label1_Copy10" Content="27.52" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
+        <RadioButton x:Name="ventrigulomegalyYes" GroupName="Ventriculomegaly" Content="Yes" HorizontalAlignment="Left" Margin="51,194,0,0" VerticalAlignment="Top" Height="15" Width="37"/>
+        <RadioButton x:Name="ventrigulomegalyNo" GroupName="Ventriculomegaly" Content="No" HorizontalAlignment="Left" Margin="125,194,0,0" VerticalAlignment="Top" Height="15" Width="35"/>
+        <RadioButton x:Name="ventrigulomegalyNotAssessed" GroupName="Ventriculomegaly" Content="Not Assessed" HorizontalAlignment="Left" Margin="196,194,0,0" VerticalAlignment="Top" Height="15" Width="90" Checked="UpdateVentrigulomegalyRatio"/>
+        <Label x:Name="ventriculomegalyRatioLabel" Content="1" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Right"/>
         <Label x:Name="label2_Copy1" Content="Results" HorizontalAlignment="Left" Margin="10,513,0,0" VerticalAlignment="Top" FontSize="14.667" Foreground="#FF003399" Height="30" Width="150"/>
         <Label x:Name="label4" Content="Adjusted risk (1/N):" HorizontalAlignment="Left" Margin="10,548,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label4_Copy" Content="Likelihood ratio:" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label4_Copy1" Content="91.761" HorizontalAlignment="Left" Margin="127,548,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" Width="100" BorderBrush="#FFABADB3" BorderThickness="1" Background="#FF8CF388"/>
-        <Label x:Name="label4_Copy2" Content="10.898" HorizontalAlignment="Left" Margin="127,579,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" Width="100" BorderBrush="#FFABADB3" BorderThickness="1" Background="#FF8CF388"/>
+        <Label x:Name="label4_Copy1" Content="1000" HorizontalAlignment="Left" Margin="127,548,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" Width="100" BorderBrush="#FFABADB3" BorderThickness="1" Background="#FF8CF388"/>
+        <Label x:Name="label4_Copy2" Content="1" HorizontalAlignment="Left" Margin="127,579,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" Width="100" BorderBrush="#FFABADB3" BorderThickness="1" Background="#FF8CF388"/>
 
     </Grid>
 </Window>
