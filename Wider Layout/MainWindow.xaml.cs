@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Wider_Layout
 {
@@ -25,6 +15,9 @@ namespace Wider_Layout
             InitializeComponent();
 
             echogenicFocusNotAssessed.IsChecked = true;
+            ventrigulomegalyNotAssessed.IsChecked = true;
+            echogenicBowelNotAssessed.IsChecked = true;
+            hydronephrosisNotAssessed.IsChecked = true;
         }
 
         double echogenicFocusRatio = 1;
@@ -92,45 +85,63 @@ namespace Wider_Layout
             new List<string>() { "Not Assessed", "1-1.9 mm", "2-2.9 mm", "3-3.9 mm", "4-4.9 mm", "5-5.9 mm", "6-6.9 mm", "≥7 mm" },
         };
 
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void UpdateEchogenicFocusRatio(object sender, RoutedEventArgs e)
         {
             RadioButton radioButton = sender as RadioButton;
             if (radioButton != null)
             {
                 if (radioButton.Content.ToString() == "Not Assessed")
-                {
                     echogenicFocusRatio = echogenicFocusRatios[0];
-                    echogenicFocusRatioLabel.Content = echogenicFocusRatio.ToString();
-                }
                 else if (radioButton.Content.ToString() == "Yes")
-                {
                     echogenicFocusRatio = echogenicFocusRatios[1];
-                    echogenicFocusRatioLabel.Content = echogenicFocusRatio.ToString();
-                }
                 else if (radioButton.Content.ToString() == "No")
-                {
                     echogenicFocusRatio = echogenicFocusRatios[2];
-                    echogenicFocusRatioLabel.Content = echogenicFocusRatio.ToString();
-                }
+                echogenicFocusRatioLabel.Content = echogenicFocusRatio.ToString();
             }
         }
 
         private void UpdateVentrigulomegalyRatio(object sender, RoutedEventArgs e)
         {
-            if (ventrigulomegalyNotAssessed.IsChecked == true)
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
             {
-                ventriculomegalyRatio = ventriculomegalyRatios[0];
+                if (radioButton.Content.ToString() == "Not Assessed")
+                    ventriculomegalyRatio = ventriculomegalyRatios[0];
+                else if (radioButton.Content.ToString() == "Yes")
+                    ventriculomegalyRatio = ventriculomegalyRatios[1];
+                else if (radioButton.Content.ToString() == "No")
+                    ventriculomegalyRatio = ventriculomegalyRatios[2];
                 ventriculomegalyRatioLabel.Content = ventriculomegalyRatio.ToString();
             }
-            else if (ventrigulomegalyYes.IsChecked == true)
+        }
+
+        private void UpdateEchogenicBowelRatio(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
             {
-                ventriculomegalyRatio = ventriculomegalyRatios[1];
-                ventriculomegalyRatioLabel.Content = 
+                if (radioButton.Content.ToString() == "Not Assessed")
+                    echogenicBowelRatio = echogenicBowelsRatios[0];
+                else if (radioButton.Content.ToString() == "Yes")
+                    echogenicBowelRatio = echogenicBowelsRatios[1];
+                else if (radioButton.Content.ToString() == "No")
+                    echogenicBowelRatio = echogenicBowelsRatios[2];
+                echogenicBowelRatioLabel.Content = echogenicBowelRatio.ToString();
+            }
+        }
+
+        private void UpdateHydronephrosisRatio(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                if (radioButton.Content.ToString() == "Not Assessed")
+                    hydronephrosisRatio = hydronephrosisRatios[0];
+                else if (radioButton.Content.ToString() == "Yes")
+                    hydronephrosisRatio = hydronephrosisRatios[1];
+                else if (radioButton.Content.ToString() == "No")
+                    hydronephrosisRatio = hydronephrosisRatios[2];
+                hydronephrosisRatioLabel.Content = hydronephrosisRatio.ToString();
             }
         }
     }
