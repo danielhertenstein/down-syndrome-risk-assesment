@@ -28,9 +28,15 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <Label>Adjusted risk (1/N):</Label>
-            <TextBlock Width="100" Text="{Binding adjustedRisk}" />
+        <StackPanel Grid.Row="2" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label>Likelihood ratio:</Label>
+                <TextBlock Width="100" Text="{Binding likelihoodRatio}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Adjusted risk (1/N):</Label>
+                <TextBlock Width="100" Text="{Binding adjustedRisk}" />
+            </StackPanel>
         </StackPanel>
         
     </Grid>

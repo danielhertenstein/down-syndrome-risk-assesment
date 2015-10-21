@@ -34,6 +34,8 @@
                 OnPropertyChanged("echogenicFocusNo");
                 OnPropertyChanged("echogenicFocusNotAssessed");
                 OnPropertyChanged("echogenicFocusRatio");
+                OnPropertyChanged("likelihoodRatio");
+                OnPropertyChanged("adjustedRisk");
             }
         }
         public bool echogenicFocusYes
@@ -53,11 +55,15 @@
         }
 
         // Likelihood Ratio
+        public double likelihoodRatio
+        {
+            get { return echogenicFocusRatio; }
+        }
 
         // Adjusted Risk Factor
         public double adjustedRisk
         {
-            get { return aprioriRisk; }
+            get { return aprioriRisk / likelihoodRatio; }
         }
 
 
