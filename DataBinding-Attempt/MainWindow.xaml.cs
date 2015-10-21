@@ -11,7 +11,7 @@ namespace DataBinding_Attempt
         {
             InitializeComponent();
 
-            DataContext = new RiskAssessmentModel() { aprioriRisk = 1000, echogenicFocusRatio = 1.0 };
+            DataContext = new RiskAssessmentModel();
         }
     }
 }

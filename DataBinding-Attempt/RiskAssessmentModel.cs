@@ -5,6 +5,12 @@
 
     class RiskAssessmentModel : INotifyPropertyChanged
     {
+        public RiskAssessmentModel()
+        {
+            aprioriRisk = 1000;
+            echogenicFocusRatio = 1;
+        }
+
         // Likelihood Ratios
         // All arrays must follow the pattern of { "Yes", "No", "Not Assessed" }.
         double[] echogenicFocusRatios = { 5.83, 0.8, 1 };
