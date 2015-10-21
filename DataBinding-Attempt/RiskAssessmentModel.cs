@@ -20,6 +20,7 @@
         double[] ventriculomegalyRatios = { 27.52, 0.94, 1 };
         double[] echogenicBowelsRatios = { 11.44, 0.9, 1 };
         double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
+        int[] longBoneChoices = { 0, 1 };
 
         // a priori Risk
         private double _aprioriRisk;
@@ -159,6 +160,28 @@
         {
             get { return hydronephrosisRatio.Equals(hydronephrosisRatios[2]); }
             set { hydronephrosisRatio = hydronephrosisRatios[2]; }
+        }
+
+        private int _longBoneChoice;
+        public int longBoneChoice
+        {
+            get { return _longBoneChoice; }
+            set
+            {
+                _longBoneChoice = value;
+                OnPropertyChanged("shortFemur");
+                OnPropertyChanged("shortHumerus");
+            }
+        }
+        public bool shortFemur
+        {
+            get { return longBoneChoice.Equals(longBoneChoices[0]); }
+            set { longBoneChoice = longBoneChoices[0]; }
+        }
+        public bool shortHumerus
+        {
+            get { return longBoneChoice.Equals(longBoneChoices[1]); }
+            set { longBoneChoice = longBoneChoices[1]; }
         }
 
         // Likelihood Ratio

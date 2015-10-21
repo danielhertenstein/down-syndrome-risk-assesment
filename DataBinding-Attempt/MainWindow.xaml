@@ -14,6 +14,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -62,6 +63,10 @@
         </StackPanel>
 
         <StackPanel Grid.Row="5" Orientation="Vertical">
+            <ComboBox IsEditable="False" ItemsSource="{Binding longBoneChoices}" DisplayMemberPath="Name" SelectedValuePath="Name" SelectedValue="{Binding longBoneChoice}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label>Likelihood ratio:</Label>
                 <TextBlock Width="100" Text="{Binding likelihoodRatio}" />
