@@ -11,6 +11,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -29,6 +30,16 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Vertical">
+            <Label>Ventriculomegaly:</Label>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="Ventriculomegaly" Content="Yes" IsChecked="{Binding ventriculomegalyYes, Mode=TwoWay}" />
+                <RadioButton GroupName="Ventriculomegaly" Content="No" IsChecked="{Binding ventriculomegalyNo, Mode=TwoWay}" />
+                <RadioButton GroupName="Ventriculomegaly" Content="Not Assessed" IsChecked="{Binding ventriculomegalyNotAssessed, Mode=TwoWay}" />
+                <TextBlock Text="{Binding ventriculomegalyRatio}" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label>Likelihood ratio:</Label>
                 <TextBlock Width="100" Text="{Binding likelihoodRatio}" />
