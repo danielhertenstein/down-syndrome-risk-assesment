@@ -10,6 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -17,7 +18,17 @@
             <TextBox Width="100" Text="{Binding aprioriRisk, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <Label>Echogenic focus:</Label>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="EchogenicFocus" Content="Yes" IsChecked="{Binding echogenicFocusYes, Mode=TwoWay}" />
+                <RadioButton GroupName="EchogenicFocus" Content="No" IsChecked="{Binding echogenicFocusNo, Mode=TwoWay}" />
+                <RadioButton GroupName="EchogenicFocus" Content="Not Assessed" IsChecked="{Binding echogenicFocusNotAssessed, Mode=TwoWay}" />
+                <TextBlock Text="{Binding echogenicFocusRatio}" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Label>Adjusted risk (1/N):</Label>
             <TextBlock Width="100" Text="{Binding adjustedRisk}" />
         </StackPanel>
