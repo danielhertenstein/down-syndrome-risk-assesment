@@ -12,6 +12,8 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -40,6 +42,26 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Vertical">
+            <Label>Echogenic bowels:</Label>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="EchogenicBowels" Content="Yes" IsChecked="{Binding echogenicBowelsYes, Mode=TwoWay}" />
+                <RadioButton GroupName="EchogenicBowels" Content="No" IsChecked="{Binding echogenicBowelsNo, Mode=TwoWay}" />
+                <RadioButton GroupName="EchogenicBowels" Content="Not Assessed" IsChecked="{Binding echogenicBowelsNotAssessed, Mode=TwoWay}" />
+                <TextBlock Text="{Binding echogenicBowelsRatio}" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Vertical">
+            <Label>Mild hydronephrosis:</Label>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="Hydronephrosis" Content="Yes" IsChecked="{Binding hydronephrosisYes, Mode=TwoWay}" />
+                <RadioButton GroupName="Hydronephrosis" Content="No" IsChecked="{Binding hydronephrosisNo, Mode=TwoWay}" />
+                <RadioButton GroupName="Hydronephrosis" Content="Not Assessed" IsChecked="{Binding hydronephrosisNotAssessed, Mode=TwoWay}" />
+                <TextBlock Text="{Binding hydronephrosisRatio}" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label>Likelihood ratio:</Label>
                 <TextBlock Width="100" Text="{Binding likelihoodRatio}" />
