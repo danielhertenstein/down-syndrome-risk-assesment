@@ -14,7 +14,12 @@
             echogenicBowelsRatio = 1;
             hydronephrosisRatio = 1;
             longBoneRatio = 1;
-            longBoneChoice = "Short Femur:";
+            LongBoneItems = new List<LongBoneItem>()
+            {
+                new LongBoneItem() { Name="Short Femur:", ID=0 },
+                new LongBoneItem() { Name="Short Humerus:", ID=1 }
+            };
+            longBoneChoice = 0;
         }
 
         // Likelihood Ratios
@@ -167,12 +172,9 @@
         }
 
         // Long Bone (Short Femur or Short Humerus)
-        public IEnumerable<string> LongBoneItems
-        {
-            get { return new string[] { "Short Femur:", "Short Humerus:" }; }
-        }
-        private string _longBoneChoice;
-        public string longBoneChoice
+        public List<LongBoneItem> LongBoneItems { get; set; }
+        private int _longBoneChoice;
+        public int longBoneChoice
         {
             get { return _longBoneChoice; }
             set
@@ -217,56 +219,19 @@
         }
         public bool longBoneYes
         {
-            get
-            {
-                if (longBoneChoice == "Short Femur:")
-                    return longBoneRatio.Equals(longBoneRatios[0, 0]);
-                else
-                    return longBoneRatio.Equals(longBoneRatios[1, 0]);
-            }
-            set
-            {
-                if (longBoneChoice == "Short Femur:")
-                    longBoneRatio = longBoneRatios[0, 0];
-                else
-                    longBoneRatio = longBoneRatios[1, 0];
-            }
+            get { return longBoneRatio.Equals(longBoneRatios[longBoneChoice, 0]); }
+            set { longBoneRatio = longBoneRatios[longBoneChoice, 0]; }
         }
         public bool longBoneNo
         {
-            get
-            {
-                if (longBoneChoice == "Short Femur:")
-                    return longBoneRatio.Equals(longBoneRatios[0, 1]);
-                else
-                    return longBoneRatio.Equals(longBoneRatios[1, 1]);
-            }
-            set
-            {
-                if (longBoneChoice == "Short Femur:")
-                    longBoneRatio = longBoneRatios[0, 1];
-                else
-                    longBoneRatio = longBoneRatios[1, 1];
-            }
+            get { return longBoneRatio.Equals(longBoneRatios[longBoneChoice, 1]); }
+            set { longBoneRatio = longBoneRatios[longBoneChoice, 1]; }
         }
         public bool longBoneNotAssessed
         {
-            get
-            {
-                if (longBoneChoice == "Short Femur:")
-                    return longBoneRatio.Equals(longBoneRatios[0, 2]);
-                else
-                    return longBoneRatio.Equals(longBoneRatios[1, 2]);
-            }
-            set
-            {
-                if (longBoneChoice == "Short Femur:")
-                    longBoneRatio = longBoneRatios[0, 2];
-                else
-                    longBoneRatio = longBoneRatios[1, 2];
-            }
+            get { return longBoneRatio.Equals(longBoneRatios[longBoneChoice, 2]); }
+            set { longBoneRatio = longBoneRatios[longBoneChoice, 2]; }
         }
-
 
         // Likelihood Ratio
         public double likelihoodRatio
@@ -296,5 +261,12 @@
         }
 
         #endregion
+    }
+
+    // Simple class to hold the information for the long bone dropdown box items.
+    public class LongBoneItem
+    {
+        public string Name { get; set; }
+        public int ID { get; set; }
     }
 }

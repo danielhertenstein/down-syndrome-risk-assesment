@@ -63,7 +63,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="5" Orientation="Vertical">
-            <ComboBox IsEditable="False" ItemsSource="{Binding LongBoneItems}" SelectedValue="{Binding longBoneChoice, Mode=TwoWay}" />
+            <ComboBox IsEditable="False" ItemsSource="{Binding LongBoneItems}" DisplayMemberPath="Name" SelectedValuePath="ID" SelectedValue="{Binding longBoneChoice, Mode=TwoWay}" />
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="LongBone" Content="Yes" IsChecked="{Binding longBoneYes, Mode=TwoWay}" />
                 <RadioButton GroupName="LongBone" Content="No" IsChecked="{Binding longBoneNo, Mode=TwoWay}" />
