@@ -18,6 +18,7 @@
                 new LongBoneItem() {LongBoneItemEnum = LongBoneEnum.Bones.Femur, LongBoneItemString = "Short Femur:" },
                 new LongBoneItem() {LongBoneItemEnum = LongBoneEnum.Bones.Humerus, LongBoneItemString = "Short Humerus:" },
             };
+            longBoneRatio = 1;
         }
 
         // Likelihood Ratios
@@ -26,7 +27,7 @@
         double[] ventriculomegalyRatios = { 27.52, 0.94, 1 };
         double[] echogenicBowelsRatios = { 11.44, 0.9, 1 };
         double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
-        int[] longBoneChoices = { 0, 1 };
+        double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
 
         // a priori Risk
         private double _aprioriRisk;
@@ -179,7 +180,42 @@
             {
                 _longBoneChoice = value;
                 OnPropertyChanged("longBoneChoice");
+                OnPropertyChanged("longBoneYes");
+                OnPropertyChanged("longBoneNo");
+                OnPropertyChanged("longBoneNotAssessed");
+                OnPropertyChanged("longBoneRatio");
             }
+        }
+
+        private double _longBoneRatio;
+        public double longBoneRatio
+        {
+            get { return _longBoneRatio; }
+            set
+            {
+                _longBoneRatio = value;
+                OnPropertyChanged("longBoneYes");
+                OnPropertyChanged("longBoneNo");
+                OnPropertyChanged("longBoneNotAssessed");
+                OnPropertyChanged("longBoneRatio");
+                OnPropertyChanged("likelihoodRatio");
+                OnPropertyChanged("adjustedRisk");
+            }
+        }
+        public bool longBoneYes
+        {
+            get { return longBoneRatio.Equals(longBoneRatios[(int)longBoneChoice.boneEnum, 0]); }
+            set { longBoneRatio = longBoneRatios[(int)longBoneChoice.boneEnum, 0]; }
+        }
+        public bool longBoneNo
+        {
+            get { return longBoneRatio.Equals(longBoneRatios[(int)longBoneChoice.boneEnum, 1]); }
+            set { longBoneRatio = longBoneRatios[(int)longBoneChoice.boneEnum, 1]; }
+        }
+        public bool longBoneNotAssessed
+        {
+            get { return longBoneRatio.Equals(longBoneRatios[(int)longBoneChoice.boneEnum, 2]); }
+            set { longBoneRatio = longBoneRatios[(int)longBoneChoice.boneEnum, 2]; }
         }
 
         // Likelihood Ratio
@@ -239,6 +275,7 @@
             {
                 _boneEnum = value;
                 OnPropertyChanged("boneEnum");
+                OnPropertyChanged("longBoneChoice");
             }
         }
 
