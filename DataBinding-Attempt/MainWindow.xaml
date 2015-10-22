@@ -63,7 +63,8 @@
         </StackPanel>
 
         <StackPanel Grid.Row="5" Orientation="Vertical">
-            <ComboBox IsEditable="False" ItemsSource="{Binding longBoneChoices}" DisplayMemberPath="Name" SelectedValuePath="Name" SelectedValue="{Binding longBoneChoice}" />
+            <ComboBox IsEditable="False" ItemsSource="{Binding LongBoneList}" DisplayMemberPath="LongBoneItemString" SelectedValuePath="LongBoneItemEnum" SelectedValue="{Binding longBoneChoice.boneEnum}" />
+            <TextBlock Text="{Binding longBoneChoice.boneEnum}" />
         </StackPanel>
 
         <StackPanel Grid.Row="6" Orientation="Vertical">

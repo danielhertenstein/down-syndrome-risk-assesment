@@ -2,6 +2,7 @@
 {
     using System;
     using System.ComponentModel;
+    using System.Collections.Generic;
 
     class RiskAssessmentModel : INotifyPropertyChanged
     {
@@ -12,6 +13,11 @@
             ventriculomegalyRatio = 1;
             echogenicBowelsRatio = 1;
             hydronephrosisRatio = 1;
+            LongBoneList = new List<LongBoneItem>()
+            {
+                new LongBoneItem() {LongBoneItemEnum = LongBoneEnum.Bones.Femur, LongBoneItemString = "Short Femur:" },
+                new LongBoneItem() {LongBoneItemEnum = LongBoneEnum.Bones.Humerus, LongBoneItemString = "Short Humerus:" },
+            };
         }
 
         // Likelihood Ratios
@@ -131,6 +137,7 @@
             set { echogenicBowelsRatio = echogenicBowelsRatios[2]; }
         }
 
+        // Mild Hydronephrosis
         private double _hydronephrosisRatio;
         public double hydronephrosisRatio
         {
@@ -162,26 +169,17 @@
             set { hydronephrosisRatio = hydronephrosisRatios[2]; }
         }
 
-        private int _longBoneChoice;
-        public int longBoneChoice
+        // Long Bone (Short Femur or Short Humerus)
+        public List<LongBoneItem> LongBoneList { get; set; }
+        private LongBoneEnum _longBoneChoice = new LongBoneEnum();
+        public LongBoneEnum longBoneChoice
         {
             get { return _longBoneChoice; }
             set
             {
                 _longBoneChoice = value;
-                OnPropertyChanged("shortFemur");
-                OnPropertyChanged("shortHumerus");
+                OnPropertyChanged("longBoneChoice");
             }
-        }
-        public bool shortFemur
-        {
-            get { return longBoneChoice.Equals(longBoneChoices[0]); }
-            set { longBoneChoice = longBoneChoices[0]; }
-        }
-        public bool shortHumerus
-        {
-            get { return longBoneChoice.Equals(longBoneChoices[1]); }
-            set { longBoneChoice = longBoneChoices[1]; }
         }
 
         // Likelihood Ratio
@@ -196,6 +194,53 @@
             get { return aprioriRisk / likelihoodRatio; }
         }
 
+
+        #region INotifyPropertyChanged Members
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        #endregion
+    }
+
+    // Class to hold the info for each item in the Long Bone dropdown list.
+    public class LongBoneItem
+    {
+        public LongBoneEnum.Bones LongBoneItemEnum { get; set; }
+        public string LongBoneItemString { get; set; }
+    }
+
+    // Class for the Enum used for the Long Bone dropdown list items.
+    public class LongBoneEnum : INotifyPropertyChanged
+    {
+        public enum Bones
+        {
+            Femur = 0,
+            Humerus = 1
+        }
+
+        public LongBoneEnum() { }
+
+        private LongBoneEnum.Bones _boneEnum = LongBoneEnum.Bones.Femur;
+
+        public LongBoneEnum.Bones boneEnum
+        {
+            get { return _boneEnum; }
+            set
+            {
+                _boneEnum = value;
+                OnPropertyChanged("boneEnum");
+            }
+        }
 
         #region INotifyPropertyChanged Members
 
