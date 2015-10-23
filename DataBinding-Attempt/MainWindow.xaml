@@ -55,12 +55,12 @@
         </StackPanel>
 
         <StackPanel Grid.Row="4" Orientation="Vertical">
-            <Label>Mild hydronephrosis:</Label>
+            <Label>Urinary Tract Dilation:</Label>
             <StackPanel Orientation="Horizontal">
-                <RadioButton GroupName="Hydronephrosis" Content="Yes" IsChecked="{Binding hydronephrosisYes, Mode=TwoWay}" />
-                <RadioButton GroupName="Hydronephrosis" Content="No" IsChecked="{Binding hydronephrosisNo, Mode=TwoWay}" />
-                <RadioButton GroupName="Hydronephrosis" Content="Not Assessed" IsChecked="{Binding hydronephrosisNotAssessed, Mode=TwoWay}" />
-                <TextBlock Text="{Binding hydronephrosisRatio}" />
+                <RadioButton GroupName="UrinaryDilation" Content="Yes" IsChecked="{Binding urinaryDilationYes, Mode=TwoWay}" />
+                <RadioButton GroupName="UrinaryDilation" Content="No" IsChecked="{Binding urinaryDilationNo, Mode=TwoWay}" />
+                <RadioButton GroupName="UrinaryDilation" Content="Not Assessed" IsChecked="{Binding urinaryDilationNotAssessed, Mode=TwoWay}" />
+                <TextBlock Text="{Binding urinaryDilationRatio}" />
             </StackPanel>
         </StackPanel>
 

@@ -12,7 +12,7 @@
             echogenicFocusRatio = 1;
             ventriculomegalyRatio = 1;
             echogenicBowelRatio = 1;
-            hydronephrosisRatio = 1;
+            urinaryDilationRatio = 1;
             longBoneAssessment = 2;
             LongBoneItems = new List<ListItem>()
             {
@@ -51,7 +51,7 @@
         double[] echogenicFocusRatios = { 5.83, 0.8, 1 };
         double[] ventriculomegalyRatios = { 27.52, 0.94, 1 };
         double[] echogenicBowelRatios = { 11.44, 0.9, 1 };
-        double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
+        double[] urinaryDilationRatios = { 7.63, 0.92, 1 };
         double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
         double[] nasalBoneRatios = { 23.27, 0.46, 1 };
         double[,] nuchalFoldRatios = new double[18, 8]
@@ -197,36 +197,36 @@
             set { echogenicBowelRatio = echogenicBowelRatios[2]; }
         }
 
-        // Mild Hydronephrosis
-        private double _hydronephrosisRatio;
-        public double hydronephrosisRatio
+        // Urinary Tract Dilation
+        private double _urinaryDilationRatio;
+        public double urinaryDilationRatio
         {
-            get { return _hydronephrosisRatio; }
+            get { return _urinaryDilationRatio; }
             set
             {
-                _hydronephrosisRatio = value;
-                OnPropertyChanged("hydronephrosisYes");
-                OnPropertyChanged("hydronephrosisNo");
-                OnPropertyChanged("hydronephrosisNotAssessed");
-                OnPropertyChanged("hydronephrosisRatio");
+                _urinaryDilationRatio = value;
+                OnPropertyChanged("urinaryDilationYes");
+                OnPropertyChanged("urinaryDilationNo");
+                OnPropertyChanged("urinaryDilationNotAssessed");
+                OnPropertyChanged("urinaryDilationRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
             }
         }
-        public bool hydronephrosisYes
+        public bool urinaryDilationYes
         {
-            get { return hydronephrosisRatio.Equals(hydronephrosisRatios[0]); }
-            set { hydronephrosisRatio = hydronephrosisRatios[0]; }
+            get { return urinaryDilationRatio.Equals(urinaryDilationRatios[0]); }
+            set { urinaryDilationRatio = urinaryDilationRatios[0]; }
         }
-        public bool hydronephrosisNo
+        public bool urinaryDilationNo
         {
-            get { return hydronephrosisRatio.Equals(hydronephrosisRatios[1]); }
-            set { hydronephrosisRatio = hydronephrosisRatios[1]; }
+            get { return urinaryDilationRatio.Equals(urinaryDilationRatios[1]); }
+            set { urinaryDilationRatio = urinaryDilationRatios[1]; }
         }
-        public bool hydronephrosisNotAssessed
+        public bool urinaryDilationNotAssessed
         {
-            get { return hydronephrosisRatio.Equals(hydronephrosisRatios[2]); }
-            set { hydronephrosisRatio = hydronephrosisRatios[2]; }
+            get { return urinaryDilationRatio.Equals(urinaryDilationRatios[2]); }
+            set { urinaryDilationRatio = urinaryDilationRatios[2]; }
         }
 
         // Long Bone (Short Femur or Short Humerus)
@@ -367,7 +367,7 @@
         // Likelihood Ratio
         public double likelihoodRatio
         {
-            get { return echogenicFocusRatio * ventriculomegalyRatio * echogenicBowelRatio * hydronephrosisRatio * longBoneRatio * nasalBoneRatio * nuchalFoldRatio; }
+            get { return echogenicFocusRatio * ventriculomegalyRatio * echogenicBowelRatio * urinaryDilationRatio * longBoneRatio * nasalBoneRatio * nuchalFoldRatio; }
         }
 
         // Adjusted Risk Factor
