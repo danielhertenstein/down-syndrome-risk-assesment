@@ -11,7 +11,7 @@
             aprioriRisk = 1000;
             echogenicFocusRatio = 1;
             ventriculomegalyRatio = 1;
-            echogenicBowelsRatio = 1;
+            echogenicBowelRatio = 1;
             hydronephrosisRatio = 1;
             longBoneAssessment = 2;
             LongBoneItems = new List<ListItem>()
@@ -50,7 +50,7 @@
         // All arrays must follow the pattern of { "Yes", "No", "Not Assessed" }.
         double[] echogenicFocusRatios = { 5.83, 0.8, 1 };
         double[] ventriculomegalyRatios = { 27.52, 0.94, 1 };
-        double[] echogenicBowelsRatios = { 11.44, 0.9, 1 };
+        double[] echogenicBowelRatios = { 11.44, 0.9, 1 };
         double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
         double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
         double[] nasalBoneRatios = { 23.27, 0.46, 1 };
@@ -165,36 +165,36 @@
             set { ventriculomegalyRatio = ventriculomegalyRatios[2]; }
         }
 
-        // Echogenic Bowels
-        private double _echogenicBowelsRatio;
-        public double echogenicBowelsRatio
+        // Echogenic Bowel
+        private double _echogenicBowelRatio;
+        public double echogenicBowelRatio
         {
-            get { return _echogenicBowelsRatio; }
+            get { return _echogenicBowelRatio; }
             set
             {
-                _echogenicBowelsRatio = value;
-                OnPropertyChanged("echogenicBowelsYes");
-                OnPropertyChanged("echogenicBowelsNo");
-                OnPropertyChanged("echogenicBowelsNotAssessed");
-                OnPropertyChanged("echogenicBowelsRatio");
+                _echogenicBowelRatio = value;
+                OnPropertyChanged("echogenicBowelYes");
+                OnPropertyChanged("echogenicBowelNo");
+                OnPropertyChanged("echogenicBowelNotAssessed");
+                OnPropertyChanged("echogenicBowelRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
             }
         }
-        public bool echogenicBowelsYes
+        public bool echogenicBowelYes
         {
-            get { return echogenicBowelsRatio.Equals(echogenicBowelsRatios[0]); }
-            set { echogenicBowelsRatio = echogenicBowelsRatios[0]; }
+            get { return echogenicBowelRatio.Equals(echogenicBowelRatios[0]); }
+            set { echogenicBowelRatio = echogenicBowelRatios[0]; }
         }
-        public bool echogenicBowelsNo
+        public bool echogenicBowelNo
         {
-            get { return echogenicBowelsRatio.Equals(echogenicBowelsRatios[1]); }
-            set { echogenicBowelsRatio = echogenicBowelsRatios[1]; }
+            get { return echogenicBowelRatio.Equals(echogenicBowelRatios[1]); }
+            set { echogenicBowelRatio = echogenicBowelRatios[1]; }
         }
-        public bool echogenicBowelsNotAssessed
+        public bool echogenicBowelNotAssessed
         {
-            get { return echogenicBowelsRatio.Equals(echogenicBowelsRatios[2]); }
-            set { echogenicBowelsRatio = echogenicBowelsRatios[2]; }
+            get { return echogenicBowelRatio.Equals(echogenicBowelRatios[2]); }
+            set { echogenicBowelRatio = echogenicBowelRatios[2]; }
         }
 
         // Mild Hydronephrosis
@@ -367,7 +367,7 @@
         // Likelihood Ratio
         public double likelihoodRatio
         {
-            get { return echogenicFocusRatio * ventriculomegalyRatio * echogenicBowelsRatio * hydronephrosisRatio * longBoneRatio * nasalBoneRatio * nuchalFoldRatio; }
+            get { return echogenicFocusRatio * ventriculomegalyRatio * echogenicBowelRatio * hydronephrosisRatio * longBoneRatio * nasalBoneRatio * nuchalFoldRatio; }
         }
 
         // Adjusted Risk Factor

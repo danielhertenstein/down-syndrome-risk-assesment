@@ -45,12 +45,12 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Vertical">
-            <Label>Echogenic bowels:</Label>
+            <Label>Echogenic bowel:</Label>
             <StackPanel Orientation="Horizontal">
-                <RadioButton GroupName="EchogenicBowels" Content="Yes" IsChecked="{Binding echogenicBowelsYes, Mode=TwoWay}" />
-                <RadioButton GroupName="EchogenicBowels" Content="No" IsChecked="{Binding echogenicBowelsNo, Mode=TwoWay}" />
-                <RadioButton GroupName="EchogenicBowels" Content="Not Assessed" IsChecked="{Binding echogenicBowelsNotAssessed, Mode=TwoWay}" />
-                <TextBlock Text="{Binding echogenicBowelsRatio}" />
+                <RadioButton GroupName="EchogenicBowel" Content="Yes" IsChecked="{Binding echogenicBowelYes, Mode=TwoWay}" />
+                <RadioButton GroupName="EchogenicBowel" Content="No" IsChecked="{Binding echogenicBowelNo, Mode=TwoWay}" />
+                <RadioButton GroupName="EchogenicBowel" Content="Not Assessed" IsChecked="{Binding echogenicBowelNotAssessed, Mode=TwoWay}" />
+                <TextBlock Text="{Binding echogenicBowelRatio}" />
             </StackPanel>
         </StackPanel>
 
