@@ -13,7 +13,7 @@
             ventriculomegalyRatio = 1;
             echogenicBowelsRatio = 1;
             hydronephrosisRatio = 1;
-            longBoneRatio = 1;
+            longBoneAssessment = 2;
             LongBoneItems = new List<LongBoneItem>()
             {
                 new LongBoneItem() { Name="Short Femur:", ID=0 },
@@ -180,35 +180,20 @@
             set
             {
                 _longBoneChoice = value;
-                if (longBoneRatio == longBoneRatios[0, 0])
-                    longBoneRatio = longBoneRatios[1, 0];
-                else if (longBoneRatio == longBoneRatios[0, 1])
-                    longBoneRatio = longBoneRatios[1, 1];
-                else if (longBoneRatio == longBoneRatios[1, 0])
-                    longBoneRatio = longBoneRatios[0, 0];
-                else if (longBoneRatio == longBoneRatios[1, 1])
-                    longBoneRatio = longBoneRatios[0, 1];
-                else if (longBoneRatio == longBoneRatios[0, 2])
-                    longBoneRatio = longBoneRatios[1, 2];
-                else if (longBoneRatio == longBoneRatios[1, 2])
-                    longBoneRatio = longBoneRatios[0, 2];
                 OnPropertyChanged("longBoneChoice");
-                OnPropertyChanged("longBoneYes");
-                OnPropertyChanged("longBoneNo");
-                OnPropertyChanged("longBoneNotAssessed");
                 OnPropertyChanged("longBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
             }
         }
 
-        private double _longBoneRatio;
-        public double longBoneRatio
+        private int _longBoneAssessment;
+        public int longBoneAssessment
         {
-            get { return _longBoneRatio; }
+            get { return _longBoneAssessment; }
             set
             {
-                _longBoneRatio = value;
+                _longBoneAssessment = value;
                 OnPropertyChanged("longBoneYes");
                 OnPropertyChanged("longBoneNo");
                 OnPropertyChanged("longBoneNotAssessed");
@@ -219,18 +204,23 @@
         }
         public bool longBoneYes
         {
-            get { return longBoneRatio.Equals(longBoneRatios[longBoneChoice, 0]); }
-            set { longBoneRatio = longBoneRatios[longBoneChoice, 0]; }
+            get { return longBoneAssessment.Equals(0); }
+            set { longBoneAssessment = 0; }
         }
         public bool longBoneNo
         {
-            get { return longBoneRatio.Equals(longBoneRatios[longBoneChoice, 1]); }
-            set { longBoneRatio = longBoneRatios[longBoneChoice, 1]; }
+            get { return longBoneAssessment.Equals(1); }
+            set { longBoneAssessment = 1; }
         }
         public bool longBoneNotAssessed
         {
-            get { return longBoneRatio.Equals(longBoneRatios[longBoneChoice, 2]); }
-            set { longBoneRatio = longBoneRatios[longBoneChoice, 2]; }
+            get { return longBoneAssessment.Equals(2); }
+            set { longBoneAssessment = 2; }
+        }
+
+        public double longBoneRatio
+        {
+            get { return longBoneRatios[longBoneChoice, longBoneAssessment]; }
         }
 
         // Likelihood Ratio
