@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBinding_Attempt"
         mc:Ignorable="d"
-        Title="Down Syndrome Risk Assessment Model" Height="450" Width="325">
+        Title="Down Syndrome Risk Assessment Model" Height="500" Width="325">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -74,7 +75,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="6" Orientation="Vertical">
-            <Label>Absent or hypoplastic NB</Label>
+            <Label>Absent or hypoplastic NB:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="NasalBone" Content="Yes" IsChecked="{Binding nasalBoneYes, Mode=TwoWay}" />
                 <RadioButton GroupName="NasalBone" Content="No" IsChecked="{Binding nasalBoneNo, Mode=TwoWay}" />
@@ -84,6 +85,18 @@
         </StackPanel>
 
         <StackPanel Grid.Row="7" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label>BPD:</Label>
+                <Label>Nuchal Fold Thickness:</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox IsEditable="False" ItemsSource="{Binding bpdItems}" DisplayMemberPath="Name" SelectedValuePath="ID" SelectedValue="{Binding bpdChoice, Mode=TwoWay}" />
+                <ComboBox IsEditable="False" ItemsSource="{Binding nuchalFoldItems}" DisplayMemberPath="Name" SelectedValuePath="ID" SelectedValue="{Binding nuchalFoldChoice, Mode=TwoWay}" />
+                <TextBlock Text="{Binding nuchalFoldRatio}" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="8" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label>Likelihood ratio:</Label>
                 <TextBlock Width="100" Text="{Binding likelihoodRatio}" />
