@@ -20,6 +20,7 @@
                 new LongBoneItem() { Name="Short Humerus:", ID=1 }
             };
             longBoneChoice = 0;
+            nasalBoneRatio = 1;
         }
 
         // Likelihood Ratios
@@ -29,6 +30,7 @@
         double[] echogenicBowelsRatios = { 11.44, 0.9, 1 };
         double[] hydronephrosisRatios = { 7.63, 0.92, 1 };
         double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
+        double[] nasalBoneRatios = { 23.27, 0.46, 1 };
 
         // a priori Risk
         private double _aprioriRisk;
@@ -223,10 +225,42 @@
             get { return longBoneRatios[longBoneChoice, longBoneAssessment]; }
         }
 
+        // Absent or Hypoplastic Nasal Bone
+        private double _nasalBoneRatio;
+        public double nasalBoneRatio
+        {
+            get { return _nasalBoneRatio; }
+            set
+            {
+                _nasalBoneRatio = value;
+                OnPropertyChanged("nasalBoneYes");
+                OnPropertyChanged("nasalBoneNo");
+                OnPropertyChanged("nasalBoneNotAssessed");
+                OnPropertyChanged("nasalBoneRatio");
+                OnPropertyChanged("likelihoodRatio");
+                OnPropertyChanged("adjustedRisk");
+            }
+        }
+        public bool nasalBoneYes
+        {
+            get { return nasalBoneRatio.Equals(nasalBoneRatios[0]); }
+            set { nasalBoneRatio = nasalBoneRatios[0]; }
+        }
+        public bool nasalBoneNo
+        {
+            get { return nasalBoneRatio.Equals(nasalBoneRatios[1]); }
+            set { nasalBoneRatio = nasalBoneRatios[1]; }
+        }
+        public bool nasalBoneNotAssessed
+        {
+            get { return nasalBoneRatio.Equals(nasalBoneRatios[2]); }
+            set { nasalBoneRatio = nasalBoneRatios[2]; }
+        }
+
         // Likelihood Ratio
         public double likelihoodRatio
         {
-            get { return echogenicFocusRatio * ventriculomegalyRatio * echogenicBowelsRatio * hydronephrosisRatio * longBoneRatio; }
+            get { return echogenicFocusRatio * ventriculomegalyRatio * echogenicBowelsRatio * hydronephrosisRatio * longBoneRatio * nasalBoneRatio; }
         }
 
         // Adjusted Risk Factor
