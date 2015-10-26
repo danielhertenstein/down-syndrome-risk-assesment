@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBinding_Attempt"
         mc:Ignorable="d"
-        Title="Down Syndrome Risk Assessment Model" Height="500" Width="325">
+        Title="Down Syndrome Risk Assessment Model" Height="600" Width="325">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -99,11 +99,11 @@
         <StackPanel Grid.Row="8" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label>Likelihood ratio:</Label>
-                <TextBlock Width="100" Text="{Binding likelihoodRatio}" />
+                <TextBox Width="100" Text="{Binding likelihoodRatio, StringFormat={}{0:N3}, Mode=OneWay}" Background="Transparent" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label>Adjusted risk (1/N):</Label>
-                <TextBlock Width="100" Text="{Binding adjustedRisk}" />
+                <TextBox Width="100" Text="{Binding adjustedRisk, StringFormat={}{0:N3}, Mode=OneWay}" Background="Transparent" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap"/>
             </StackPanel>
         </StackPanel>
         
