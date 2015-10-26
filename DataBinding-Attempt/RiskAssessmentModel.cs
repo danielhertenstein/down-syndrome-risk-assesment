@@ -1,6 +1,7 @@
 ﻿namespace DataBinding_Attempt
 {
     using System;
+    using System.Windows;
     using System.ComponentModel;
     using System.Collections.Generic;
 
@@ -323,10 +324,10 @@
             {
                 _bpdChoice = value;
                 OnPropertyChanged("bpdChoice");
+                SetNuchalFoldItems();
                 OnPropertyChanged("nuchalFoldRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
-                SetNuchalFoldItems();
             }
         }
 
@@ -353,15 +354,36 @@
         private void SetNuchalFoldItems()
         {
             if (bpdChoice == 0)
+            {
+                CheckNuchalFoldChoice(1);
                 nuchalFoldItems = allNuchalFoldItems.GetRange(0, 1);
+            }
             else if (bpdChoice > 0 && bpdChoice <= 5)
+            {
+                CheckNuchalFoldChoice(6);
                 nuchalFoldItems = allNuchalFoldItems.GetRange(0, 6);
+            }
             else if (bpdChoice > 5 && bpdChoice <= 11)
+            {
+                CheckNuchalFoldChoice(7);
                 nuchalFoldItems = allNuchalFoldItems.GetRange(0, 7);
+            }
             else if (bpdChoice > 11)
                 nuchalFoldItems = allNuchalFoldItems;
-
             OnPropertyChanged("nuchalFoldItems");
+        }
+
+        // Abandoning MVVM here because something as simple as a message box is disgustingly complex.
+        private void CheckNuchalFoldChoice(int maxIndex)
+        {
+            if (nuchalFoldChoice >= maxIndex)
+            {
+                MessageBox.Show("No data for this nuchal fold thickness / BPD combination." + Environment.NewLine + "Resetting the nuchal fold thickness.",
+                    "Option Selection Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                nuchalFoldChoice = 0;
+            }
         }
 
         // Likelihood Ratio
@@ -375,7 +397,6 @@
         {
             get { return aprioriRisk / likelihoodRatio; }
         }
-
 
         #region INotifyPropertyChanged Members
 
