@@ -90,8 +90,8 @@
         };
 
         // a priori Risk
-        private double _aprioriRisk;
-        public double aprioriRisk
+        private int _aprioriRisk;
+        public int aprioriRisk
         {
             get { return _aprioriRisk; }
             set
