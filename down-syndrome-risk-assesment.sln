@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding-Attempt", "DataBinding-Attempt\DataBinding-Attempt.csproj", "{02EB04B1-9262-4A64-9389-53C25FA3545A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "down-syndrome-risk-assessment", "down-syndrome-risk-assessment\down-syndrome-risk-assessment.csproj", "{02EB04B1-9262-4A64-9389-53C25FA3545A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
