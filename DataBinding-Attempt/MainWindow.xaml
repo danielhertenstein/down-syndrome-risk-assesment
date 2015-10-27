@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBinding_Attempt"
         mc:Ignorable="d"
-        Title="Down Syndrome Risk Assessment Model" Height="546.667" Width="450" SnapsToDevicePixels="True" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
-    <Grid Margin="11" FocusManager.FocusedElement="{Binding ElementName=aprioriRiskBox}" >
+        Title="Down Syndrome Risk Assessment Model" Height="546.667" Width="450" SnapsToDevicePixels="True" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
+        FocusManager.FocusedElement="{Binding ElementName=aprioriRiskBox}" ContentRendered="Window_ContentRendered">
+    <Grid Margin="11" >
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -25,7 +26,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
             <Label Margin="0,0,5,11" Padding="0" VerticalAlignment="Center">a priori risk (1/N):</Label>
-            <TextBox x:Name="aprioriRiskBox" Width="100" Text="{Binding aprioriRisk, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,11" Height="23" VerticalContentAlignment="Center" VerticalAlignment="Center" TabIndex="1" />
+            <TextBox x:Name="aprioriRiskBox" Width="100" Text="{Binding aprioriRisk, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,11" Height="23" VerticalContentAlignment="Center" VerticalAlignment="Center" TabIndex="1" Background="#FF8EDBFF" />
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">

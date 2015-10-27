@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace DataBinding_Attempt
 {
@@ -12,6 +13,11 @@ namespace DataBinding_Attempt
             InitializeComponent();
 
             DataContext = new RiskAssessmentModel();
+        }
+
+        private void Window_ContentRendered(object sender, EventArgs e)
+        {
+            aprioriRiskBox.CaretIndex = aprioriRiskBox.Text.Length;
         }
     }
 }
