@@ -6,75 +6,83 @@
         xmlns:local="clr-namespace:DataBinding_Attempt"
         mc:Ignorable="d"
         Title="Down Syndrome Risk Assessment Model" Height="546.667" Width="450" SnapsToDevicePixels="True" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
-    <StackPanel Margin="11" FocusManager.FocusedElement="{Binding ElementName=aprioriRiskBox}">
+    <Grid Margin="11" FocusManager.FocusedElement="{Binding ElementName=aprioriRiskBox}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
             <Label Margin="0,0,5,11" Padding="0" VerticalAlignment="Center">a priori risk (1/N):</Label>
             <TextBox x:Name="aprioriRiskBox" Width="100" Text="{Binding aprioriRisk, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,11" Height="23" VerticalContentAlignment="Center" VerticalAlignment="Center" TabIndex="1" />
         </StackPanel>
 
-        <StackPanel Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Echogenic focus:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="EchogenicFocus" Content="Yes" IsChecked="{Binding echogenicFocusYes, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="EchogenicFocus" Content="No" IsChecked="{Binding echogenicFocusNo, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="EchogenicFocus" Content="Not Assessed" IsChecked="{Binding echogenicFocusNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
-                <TextBlock Text="{Binding echogenicFocusRatio}" />
             </StackPanel>
         </StackPanel>
 
-
-        <StackPanel Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Ventriculomegaly:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="Ventriculomegaly" Content="Yes" IsChecked="{Binding ventriculomegalyYes, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="Ventriculomegaly" Content="No" IsChecked="{Binding ventriculomegalyNo, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="Ventriculomegaly" Content="Not Assessed" IsChecked="{Binding ventriculomegalyNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
-                <TextBlock Text="{Binding ventriculomegalyRatio}" />
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Echogenic bowel:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="EchogenicBowel" Content="Yes" IsChecked="{Binding echogenicBowelYes, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="EchogenicBowel" Content="No" IsChecked="{Binding echogenicBowelNo, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="EchogenicBowel" Content="Not Assessed" IsChecked="{Binding echogenicBowelNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
-                <TextBlock Text="{Binding echogenicBowelRatio}" />
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Urinary Tract Dilation:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="UrinaryDilation" Content="Yes" IsChecked="{Binding urinaryDilationYes, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="UrinaryDilation" Content="No" IsChecked="{Binding urinaryDilationNo, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="UrinaryDilation" Content="Not Assessed" IsChecked="{Binding urinaryDilationNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
-                <TextBlock Text="{Binding urinaryDilationRatio}" />
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="5" Orientation="Vertical">
             <ComboBox IsEditable="False" ItemsSource="{Binding LongBoneItems}" DisplayMemberPath="Name" SelectedValuePath="ID" SelectedValue="{Binding longBoneChoice, Mode=TwoWay}" Margin="0,0,0,5" Width="120" HorizontalAlignment="Left" />
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="LongBone" Content="Yes" IsChecked="{Binding longBoneYes, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="LongBone" Content="No" IsChecked="{Binding longBoneNo, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="LongBone" Content="Not Assessed" IsChecked="{Binding longBoneNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
-                <TextBlock Text="{Binding longBoneRatio}" />
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Absent or hypoplastic NB:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="NasalBone" Content="Yes" IsChecked="{Binding nasalBoneYes, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="NasalBone" Content="No" IsChecked="{Binding nasalBoneNo, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="NasalBone" Content="Not Assessed" IsChecked="{Binding nasalBoneNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
-                <TextBlock Text="{Binding nasalBoneRatio}" />
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label Margin="0,0,7,5" Padding="0" Width="120">BPD:</Label>
                 <Label Margin="0,0,0,5" Padding="0">Nuchal Fold Thickness:</Label>
@@ -82,11 +90,10 @@
             <StackPanel Orientation="Horizontal">
                 <ComboBox IsEditable="False" ItemsSource="{Binding bpdItems}" DisplayMemberPath="Name" SelectedValuePath="ID" SelectedValue="{Binding bpdChoice, Mode=TwoWay}" Margin="0,0,7,11" Width="120" />
                 <ComboBox IsEditable="False" ItemsSource="{Binding nuchalFoldItems}" DisplayMemberPath="Name" SelectedValuePath="ID" SelectedValue="{Binding nuchalFoldChoice, Mode=TwoWay}" Margin="0,0,7,11" Width="120" />
-                <TextBlock Text="{Binding nuchalFoldRatio}" />
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="8" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label Padding="0" Margin="0,0,5,5" Width="120">Likelihood ratio:</Label>
                 <TextBox Width="100" Text="{Binding likelihoodRatio, StringFormat={}{0:N3}, Mode=OneWay}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" Margin="0,0,0,5"/>
@@ -97,5 +104,15 @@
             </StackPanel>
         </StackPanel>
 
-    </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" >
+            <Label Padding="0" Margin="11,0,0,5">Likelihood Ratio</Label>
+            <TextBlock Text="{Binding echogenicFocusRatio}" Margin="11,0,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        </StackPanel>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding ventriculomegalyRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding echogenicBowelRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="4" Text="{Binding urinaryDilationRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="{Binding longBoneRatio}" Margin="11,27,0,9" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="6" Text="{Binding nasalBoneRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="{Binding nuchalFoldRatio}" Margin="11,21,0,0" MinWidth="40" HorizontalAlignment="Center" />
+    </Grid>
 </Window>
