@@ -1,4 +1,4 @@
-﻿namespace DataBinding_Attempt
+﻿namespace dsram
 {
     using System;
     using System.Windows;

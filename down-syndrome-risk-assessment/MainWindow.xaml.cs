@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace DataBinding_Attempt
+namespace dsram
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
