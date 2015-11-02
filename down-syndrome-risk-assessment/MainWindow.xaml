@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dsram"
         mc:Ignorable="d"
-        Title="Down Syndrome Risk Assessment Model" Height="546.667" Width="450" SnapsToDevicePixels="True" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
+        Title="Down Syndrome Risk Assessment Model" Height="672.509" Width="450" SnapsToDevicePixels="True" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
         FocusManager.FocusedElement="{Binding ElementName=aprioriRiskBox}" ContentRendered="Window_ContentRendered">
     <Grid Margin="11" >
         <Grid.RowDefinitions>
@@ -96,12 +96,16 @@
 
         <StackPanel Grid.Column="0" Grid.Row="8" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
-                <Label Padding="0" Margin="0,0,5,5" Width="120">Likelihood ratio:</Label>
+                <Label Padding="0" Margin="0,0,5,5" MinWidth="140">Likelihood ratio:</Label>
                 <TextBox Width="100" Text="{Binding likelihoodRatio, StringFormat={}{0:N3}, Mode=OneWay}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" Margin="0,0,0,5" IsTabStop="False"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Padding="0" Margin="0,0,5,0" Content="Adjusted risk (1/N):" Width="120"/>
-                <TextBox Width="100" Text="{Binding adjustedRisk, Mode=OneWay, StringFormat=\{0:N3\}}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" IsTabStop="False"/>
+                <Label Padding="0" Margin="0,0,5,5" Content="Adjusted risk (1/N):" MinWidth="140"/>
+                <TextBox Width="100" Text="{Binding adjustedRisk, Mode=OneWay, StringFormat=\{0:N3\}}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" IsTabStop="False" Margin="0,0,0,5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Padding="0" Margin="0,0,5,0" Content="Adjusted risk percentage:" MinWidth="140"/>
+                <TextBox Width="100" Text="{Binding riskPercentage, Mode=OneWay, StringFormat=\{0:N3\}}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" IsTabStop="False"/>
             </StackPanel>
         </StackPanel>
 

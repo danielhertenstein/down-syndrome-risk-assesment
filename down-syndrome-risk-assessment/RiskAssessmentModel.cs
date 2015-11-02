@@ -99,6 +99,7 @@
                 _aprioriRisk = value;
                 OnPropertyChanged("aprioriRisk");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
 
@@ -116,6 +117,7 @@
                 OnPropertyChanged("echogenicFocusRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
         public bool echogenicFocusYes
@@ -148,6 +150,7 @@
                 OnPropertyChanged("ventriculomegalyRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
         public bool ventriculomegalyYes
@@ -180,6 +183,7 @@
                 OnPropertyChanged("echogenicBowelRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
         public bool echogenicBowelYes
@@ -212,6 +216,7 @@
                 OnPropertyChanged("urinaryDilationRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
         public bool urinaryDilationYes
@@ -243,6 +248,7 @@
                 OnPropertyChanged("longBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
 
@@ -259,6 +265,7 @@
                 OnPropertyChanged("longBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
         public bool longBoneYes
@@ -296,6 +303,7 @@
                 OnPropertyChanged("nasalBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
         public bool nasalBoneYes
@@ -328,6 +336,7 @@
                 OnPropertyChanged("nuchalFoldRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
 
@@ -343,6 +352,7 @@
                 OnPropertyChanged("nuchalFoldRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
             }
         }
         
@@ -396,6 +406,12 @@
         public double adjustedRisk
         {
             get { return aprioriRisk / likelihoodRatio; }
+        }
+
+        // Adjusted Risk Percentage
+        public double riskPercentage
+        {
+            get { return 1 / adjustedRisk; }
         }
 
         #region INotifyPropertyChanged Members
