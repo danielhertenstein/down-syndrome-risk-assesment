@@ -54,7 +54,7 @@
         double[] echogenicBowelRatios = { 11.44, 0.9, 1 };
         double[] urinaryDilationRatios = { 7.63, 0.92, 1 };
         double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
-        double[] nasalBoneRatios = { 23.27, 0.46, 1 };
+        double[] nasalBoneRatios = { 40, 23.27, 0.46, 1 };
         double[,] nuchalFoldRatios = new double[18, 8]
          {
             { 1, -1, -1, -1, -1, -1, -1, -1 },
@@ -297,29 +297,35 @@
             set
             {
                 _nasalBoneRatio = value;
-                OnPropertyChanged("nasalBoneYes");
-                OnPropertyChanged("nasalBoneNo");
-                OnPropertyChanged("nasalBoneNotAssessed");
+                OnPropertyChanged("nasalBoneAbsent");
+                OnPropertyChanged("nasalBoneHypoplastic");
+                OnPropertyChanged("nasalBonePresent");
+                OnPropertyChanged("nasalBonePreviouslyEvaluated");
                 OnPropertyChanged("nasalBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
                 OnPropertyChanged("riskPercentage");
             }
         }
-        public bool nasalBoneYes
+        public bool nasalBoneAbsent
         {
             get { return nasalBoneRatio.Equals(nasalBoneRatios[0]); }
             set { nasalBoneRatio = nasalBoneRatios[0]; }
         }
-        public bool nasalBoneNo
+        public bool nasalBoneHypoplastic
         {
             get { return nasalBoneRatio.Equals(nasalBoneRatios[1]); }
             set { nasalBoneRatio = nasalBoneRatios[1]; }
         }
-        public bool nasalBoneNotAssessed
+        public bool nasalBonePresent
         {
             get { return nasalBoneRatio.Equals(nasalBoneRatios[2]); }
             set { nasalBoneRatio = nasalBoneRatios[2]; }
+        }
+        public bool nasalBonePreviouslyEvaluated
+        {
+            get { return nasalBoneRatio.Equals(nasalBoneRatios[3]); }
+            set { nasalBoneRatio = nasalBoneRatios[3]; }
         }
 
         // BPD and Nuchal Fold Thickness

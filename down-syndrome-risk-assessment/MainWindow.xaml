@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dsram"
         mc:Ignorable="d"
-        Title="Down Syndrome Risk Assessment Model" Height="672.509" Width="450" SnapsToDevicePixels="True" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
+        Title="Down Syndrome Risk Assessment Model" Height="672.509" Width="784.225" SnapsToDevicePixels="True" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
         FocusManager.FocusedElement="{Binding ElementName=aprioriRiskBox}" ContentRendered="Window_ContentRendered">
     <Grid Margin="11" >
         <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -75,11 +76,12 @@
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Vertical">
-            <Label Margin="0,0,0,5" Padding="0">Absent or hypoplastic NB:</Label>
+            <Label Margin="0,0,0,5" Padding="0">Nasal Bone:</Label>
             <StackPanel Orientation="Horizontal">
-                <RadioButton GroupName="NasalBone" Content="Yes" IsChecked="{Binding nasalBoneYes, Mode=TwoWay}" Margin="0,0,7,11" />
-                <RadioButton GroupName="NasalBone" Content="No" IsChecked="{Binding nasalBoneNo, Mode=TwoWay}" Margin="0,0,7,11" />
-                <RadioButton GroupName="NasalBone" Content="Not Assessed" IsChecked="{Binding nasalBoneNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="NasalBone" Content="Absent" IsChecked="{Binding nasalBoneAbsent, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="NasalBone" Content="Hypoplastic" IsChecked="{Binding nasalBoneHypoplastic, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="NasalBone" Content="Present" IsChecked="{Binding nasalBonePresent, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="NasalBone" Content="Previously Evaluated*" IsChecked="{Binding nasalBonePreviouslyEvaluted, Mode=TwoWay}" Margin="0,0,7,11" />
             </StackPanel>
         </StackPanel>
 
@@ -104,10 +106,12 @@
                 <TextBox Width="100" Text="{Binding adjustedRisk, Mode=OneWay, StringFormat=\{0:N3\}}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" IsTabStop="False" Margin="0,0,0,5"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Padding="0" Margin="0,0,5,0" Content="Adjusted risk percentage:" MinWidth="140"/>
-                <TextBox Width="100" Text="{Binding riskPercentage, Mode=OneWay, StringFormat=\{0:N3\}}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" IsTabStop="False"/>
+                <Label Padding="0" Margin="0,0,5,11" Content="Adjusted risk percentage:" MinWidth="140"/>
+                <TextBox Width="100" Text="{Binding riskPercentage, Mode=OneWay, StringFormat=\{0:N3\}}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" IsTabStop="False" Margin="0,0,0,11"/>
             </StackPanel>
         </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Text="*Select 'Previously Evaluated' for nasal bone if the patient's&#x0a;a priori risk is based on a first trimester screen that incorporated&#x0a;data on presence or absence of nasal bone." TextWrapping="Wrap"/>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" >
             <Label Padding="0" Margin="11,0,0,5">Likelihood Ratio</Label>
