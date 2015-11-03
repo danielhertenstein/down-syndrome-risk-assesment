@@ -81,7 +81,7 @@
                 <RadioButton GroupName="NasalBone" Content="Absent" IsChecked="{Binding nasalBoneAbsent, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="NasalBone" Content="Hypoplastic" IsChecked="{Binding nasalBoneHypoplastic, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="NasalBone" Content="Present" IsChecked="{Binding nasalBonePresent, Mode=TwoWay}" Margin="0,0,7,11" />
-                <RadioButton GroupName="NasalBone" Content="Previously Evaluated*" IsChecked="{Binding nasalBonePreviouslyEvaluted, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="NasalBone" Content="Previously Evaluated*" IsChecked="{Binding nasalBonePreviouslyEvaluated, Mode=TwoWay}" Margin="0,0,7,11" />
             </StackPanel>
         </StackPanel>
 
