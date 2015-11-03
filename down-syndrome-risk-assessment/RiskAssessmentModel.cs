@@ -417,7 +417,7 @@
         // Adjusted Risk Percentage
         public double riskPercentage
         {
-            get { return 1 / adjustedRisk; }
+            get { return 100 / adjustedRisk; }
         }
 
         #region INotifyPropertyChanged Members
