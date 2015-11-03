@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "down-syndrome-risk-assessment", "net35_Version\down-syndrome-risk-assessment.csproj", "{CFFAB5DD-9F22-46BB-B805-62C109634AF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "down-syndrome-risk-assessment", "down-syndrome-risk-assessment\down-syndrome-risk-assessment.csproj", "{CFFAB5DD-9F22-46BB-B805-62C109634AF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
