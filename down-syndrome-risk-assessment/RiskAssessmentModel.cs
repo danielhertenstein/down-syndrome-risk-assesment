@@ -54,7 +54,7 @@
         double[] echogenicBowelRatios = { 11.44, 0.9, 1 };
         double[] urinaryDilationRatios = { 7.63, 0.92, 1 };
         double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
-        double[] nasalBoneRatios = { 40, 23.27, 0.46, 1 };
+        double[] nasalBoneRatios = { 66.75, 23.27, 0.46, 1 };
         double[,] nuchalFoldRatios = new double[18, 8]
          {
             { 1, -1, -1, -1, -1, -1, -1, -1 },
