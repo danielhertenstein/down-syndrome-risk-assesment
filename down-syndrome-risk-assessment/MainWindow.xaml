@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:dsram"
         mc:Ignorable="d"
         Title="Down Syndrome Risk Assessment Model" Height="672.509" Width="784.225" SnapsToDevicePixels="True" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
-        FocusManager.FocusedElement="{Binding ElementName=aprioriRiskBox}" ContentRendered="Window_ContentRendered">
+        FocusManager.FocusedElement="{Binding ElementName=aprioriRiskBox}" ContentRendered="Window_ContentRendered"
+        Icon="penguin-DesctopIcon.ico">
     <Grid Margin="11" >
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
