@@ -15,8 +15,8 @@
             shortFemur = 2;
             shortHumerus = 2;
             nasalBoneRatio = 1;
-            bpdObserved = 0;
-            nuchalFoldObserved = 0;
+            bpdObserved = 48;
+            nuchalFoldObserved = 4.8668797;
         }
 
         // Likelihood Ratios
