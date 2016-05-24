@@ -14,13 +14,8 @@
             ventriculomegalyRatio = 1;
             echogenicBowelRatio = 1;
             urinaryDilationRatio = 1;
-            longBoneAssessment = 2;
-            LongBoneItems = new List<ListItem>()
-            {
-                new ListItem() { Name="Short Femur:", ID=0 },
-                new ListItem() { Name="Short Humerus:", ID=1 }
-            };
-            longBoneChoice = 0;
+            shortFemur = 2;
+            shortHumerus = 2;
             nasalBoneRatio = 1;
             bpdObserved = 0;
             nuchalFoldObserved = 0;
@@ -32,7 +27,8 @@
         double[] ventriculomegalyRatios = { 27.52, 0.94, 1 };
         double[] echogenicBowelRatios = { 11.44, 0.9, 1 };
         double[] urinaryDilationRatios = { 7.63, 0.92, 1 };
-        double[,] longBoneRatios = new double[2, 3] { { 3.72, 0.8, 1 }, { 4.81, 0.74, 1 } };
+        double[] femurRatios = { 3.72, 0.8, 1 }; 
+        double[] humerusRatios = { 4.81, 0.74, 1 };
         double[] nasalBoneRatios = { 66.75, 23.27, 0.46, 1 };
 
         // a priori Risk
@@ -181,58 +177,91 @@
             set { urinaryDilationRatio = urinaryDilationRatios[2]; }
         }
 
-        // Long Bone (Short Femur or Short Humerus)
-        public List<ListItem> LongBoneItems { get; set; }
-        private int _longBoneChoice;
-        public int longBoneChoice
-        {
-            get { return _longBoneChoice; }
-            set
-            {
-                _longBoneChoice = value;
-                OnPropertyChanged("longBoneChoice");
-                OnPropertyChanged("longBoneRatio");
-                OnPropertyChanged("likelihoodRatio");
-                OnPropertyChanged("adjustedRisk");
-                OnPropertyChanged("riskPercentage");
-            }
-        }
-
-        private int _longBoneAssessment;
-        public int longBoneAssessment
-        {
-            get { return _longBoneAssessment; }
-            set
-            {
-                _longBoneAssessment = value;
-                OnPropertyChanged("longBoneYes");
-                OnPropertyChanged("longBoneNo");
-                OnPropertyChanged("longBoneNotAssessed");
-                OnPropertyChanged("longBoneRatio");
-                OnPropertyChanged("likelihoodRatio");
-                OnPropertyChanged("adjustedRisk");
-                OnPropertyChanged("riskPercentage");
-            }
-        }
-        public bool longBoneYes
-        {
-            get { return longBoneAssessment.Equals(0); }
-            set { longBoneAssessment = 0; }
-        }
-        public bool longBoneNo
-        {
-            get { return longBoneAssessment.Equals(1); }
-            set { longBoneAssessment = 1; }
-        }
-        public bool longBoneNotAssessed
-        {
-            get { return longBoneAssessment.Equals(2); }
-            set { longBoneAssessment = 2; }
-        }
-
+        // Long Bone (Short Femur and Short Humerus)
         public double longBoneRatio
         {
-            get { return longBoneRatios[longBoneChoice, longBoneAssessment]; }
+            get
+            {
+                if (shortHumerus.Equals(0))
+                {
+                    return humerusRatios[shortHumerus];
+                }
+                else if (shortFemur.Equals(0))
+                {
+                    return femurRatios[shortFemur];
+                }
+                else if (shortFemur.Equals(1))
+                {
+                    return femurRatios[shortFemur];
+                }
+                else
+                {
+                    return humerusRatios[shortHumerus];
+                }
+            }
+        }
+        private int _shortFemur;
+        public int shortFemur
+        {
+            get { return _shortFemur; }
+            set
+            {
+                _shortFemur = value;
+                OnPropertyChanged("shortFemurYes");
+                OnPropertyChanged("shortFemurNo");
+                OnPropertyChanged("shortFemurNotAssessed");
+                OnPropertyChanged("longBoneRatio");
+                OnPropertyChanged("likelihoodRatio");
+                OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
+            }
+        }
+        public bool shortFemurYes
+        {
+            get { return shortFemur.Equals(0); }
+            set { shortFemur = 0; }
+        }
+        public bool shortFemurNo
+        {
+            get { return shortFemur.Equals(1); }
+            set { shortFemur = 1; }
+        }
+        public bool shortFemurNotAssessed
+        {
+            get { return shortFemur.Equals(2); }
+            set { shortFemur = 2; }
+        }
+
+        private int _shortHumerus;
+        public int shortHumerus
+        {
+            get { return _shortHumerus; }
+            set
+            {
+                _shortHumerus = value;
+                OnPropertyChanged("shortHumerusYes");
+                OnPropertyChanged("shortHumerusNo");
+                OnPropertyChanged("shortHumerusNotAssessed");
+                OnPropertyChanged("longBoneRatio");
+                OnPropertyChanged("likelihoodRatio");
+                OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
+            }
+        }
+        public bool shortHumerusYes
+        {
+            get { return shortHumerus.Equals(0); }
+            set { shortHumerus = 0; }
+        }
+        public bool shortHumerusNo
+        {
+            get { return shortHumerus.Equals(1); }
+            set { shortHumerus = 1; }
+        }
+        public bool shortHumerusNotAssessed
+        {
+            get { return shortHumerus.Equals(2); }
+            set { shortHumerus = 2; }
         }
 
         // Absent or Hypoplastic Nasal Bone
