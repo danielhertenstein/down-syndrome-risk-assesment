@@ -327,9 +327,21 @@
         }
 
         // Adjusted Risk Percentage
-        public double riskPercentage
+        public string riskPercentage
         {
-            get { return 100 / adjustedRisk; }
+            get
+            {
+                double percentage = 100 / adjustedRisk;
+                if (percentage < 0.001)
+                {
+                    return "< 0.001%";
+                }
+                else
+                {
+                    return percentage.ToString("N3") + "%";
+                }
+
+            }
         }
 
         #region INotifyPropertyChanged Members
