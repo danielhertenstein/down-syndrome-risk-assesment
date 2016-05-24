@@ -317,8 +317,8 @@
             }
         }
 
-        private int _nuchalFoldObserved;
-        public int nuchalFoldObserved
+        private double _nuchalFoldObserved;
+        public double nuchalFoldObserved
         {
             get { return _nuchalFoldObserved; }
             set
