@@ -1,9 +1,7 @@
 ﻿namespace dsram
 {
     using System;
-    using System.Windows;
     using System.ComponentModel;
-    using System.Collections.Generic;
 
     class RiskAssessmentModel : INotifyPropertyChanged
     {
