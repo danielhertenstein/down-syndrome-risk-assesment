@@ -132,7 +132,7 @@
         <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding echogenicBowelRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
         <TextBlock Grid.Column="1" Grid.Row="4" Text="{Binding urinaryDilationRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
         <TextBlock Grid.Column="1" Grid.Row="5" Text="{Binding nasalBoneRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
-        <TextBlock Grid.Column="1" Grid.Row="7" Grid.RowSpan="2" Text="{Binding longBoneRatio}" Margin="11,0,0,0" MinWidth="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="7" Grid.RowSpan="2" Text="{Binding longBoneRatio, StringFormat=N3}" Margin="11,0,0,0" MinWidth="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="9" Text="{Binding nuchalFoldRatio, StringFormat=N3}" Margin="11,21,0,0" MinWidth="40" HorizontalAlignment="Center" />
     </Grid>
 </Window>
