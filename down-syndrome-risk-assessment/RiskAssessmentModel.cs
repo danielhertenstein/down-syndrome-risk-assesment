@@ -15,8 +15,8 @@
             shortFemur = 2;
             shortHumerus = 2;
             nasalBoneRatio = 1;
-            bpdObserved = 48;
-            nuchalFoldObserved = 4.8668797;
+            bpdObserved = 0;
+            nuchalFoldObserved = 0;
         }
 
         // Likelihood Ratios
@@ -336,6 +336,10 @@
         {
             get
             {
+                if (bpdObserved == 0 || nuchalFoldObserved == 0)
+                {
+                    return 1;
+                }
                 double expected = 0.131 + 0.08 * bpdObserved;
                 return 0.4 + 0.1 * Math.Exp(2 * (nuchalFoldObserved - expected));
             }
