@@ -69,6 +69,16 @@
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="5" Orientation="Vertical">
+            <Label Margin="0,0,0,5" Padding="0">Nasal Bone:</Label>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="NasalBone" Content="Absent" IsChecked="{Binding nasalBoneAbsent, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="NasalBone" Content="Hypoplastic" IsChecked="{Binding nasalBoneHypoplastic, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="NasalBone" Content="Present" IsChecked="{Binding nasalBonePresent, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="NasalBone" Content="Previously Evaluated*" IsChecked="{Binding nasalBonePreviouslyEvaluated, Mode=TwoWay}" Margin="0,0,7,11" />
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Short Femur:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="Femur" Content="Yes" IsChecked="{Binding shortFemurYes, Mode=TwoWay}" Margin="0,0,7,11" />
@@ -77,22 +87,12 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Short Humerus:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="Humerus" Content="Yes" IsChecked="{Binding shortHumerusYes, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="Humerus" Content="No" IsChecked="{Binding shortHumerusNo, Mode=TwoWay}" Margin="0,0,7,11" />
                 <RadioButton GroupName="Humerus" Content="Not Assessed" IsChecked="{Binding shortHumerusNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Vertical">
-            <Label Margin="0,0,0,5" Padding="0">Nasal Bone:</Label>
-            <StackPanel Orientation="Horizontal">
-                <RadioButton GroupName="NasalBone" Content="Absent" IsChecked="{Binding nasalBoneAbsent, Mode=TwoWay}" Margin="0,0,7,11" />
-                <RadioButton GroupName="NasalBone" Content="Hypoplastic" IsChecked="{Binding nasalBoneHypoplastic, Mode=TwoWay}" Margin="0,0,7,11" />
-                <RadioButton GroupName="NasalBone" Content="Present" IsChecked="{Binding nasalBonePresent, Mode=TwoWay}" Margin="0,0,7,11" />
-                <RadioButton GroupName="NasalBone" Content="Previously Evaluated*" IsChecked="{Binding nasalBonePreviouslyEvaluated, Mode=TwoWay}" Margin="0,0,7,11" />
             </StackPanel>
         </StackPanel>
 
@@ -131,8 +131,8 @@
         <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding ventriculomegalyRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
         <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding echogenicBowelRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
         <TextBlock Grid.Column="1" Grid.Row="4" Text="{Binding urinaryDilationRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
-        <TextBlock Grid.Column="1" Grid.Row="5" Grid.RowSpan="2" Text="{Binding longBoneRatio}" Margin="11,0,0,0" MinWidth="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="7" Text="{Binding nasalBoneRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="{Binding nasalBoneRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="6" Grid.RowSpan="2" Text="{Binding longBoneRatio}" Margin="11,0,0,0" MinWidth="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="8" Text="{Binding nuchalFoldRatio, StringFormat=N3}" Margin="11,21,0,0" MinWidth="40" HorizontalAlignment="Center" />
     </Grid>
 </Window>
