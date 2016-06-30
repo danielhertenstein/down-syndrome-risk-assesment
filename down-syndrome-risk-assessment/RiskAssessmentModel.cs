@@ -26,6 +26,12 @@
         double[] echogenicBowelRatios = { 11.44, 0.9, 1 };
         double[] urinaryDilationRatios = { 7.63, 0.92, 1 };
         double[] nasalBoneRatios = { 66.75, 23.27, 0.46, 1 };
+        double[,] femurRatios = new double[2, 2] { { 0.5, 1.5 }, { 0.6, 1.6 } };
+        double[,] humerusRatios = new double[2, 2] { { 0.4, 1.4 }, { 0.3, 1.3 } };
+
+        //Long Bone Cutoffs
+        double[] shortfemurCutoff = { 1, 2 };
+        double[] shortHumerusCutoff = { 1, 2 };        
 
         // a priori Risk
         private int _aprioriRisk;
@@ -213,13 +219,26 @@
                 double femurLikelihoodRatio;
                 double humerusLikelihoodRatio;
 
+                int bpdCategory = 0;
+                if (bpdObserved < 20)
+                {
+                    bpdCategory = 1;
+                }
+
                 if (femurObserved == 0)
                 {
                     femurLikelihoodRatio = 1;
                 }
                 else
                 {
-                    femurLikelihoodRatio = 2;
+                    if (femurObserved <= shortfemurCutoff[bpdCategory])
+                    {
+                        return femurRatios[bpdCategory, 0];
+                    }
+                    else
+                    {
+                        return femurRatios[bpdCategory, 1];
+                    }
                 }
 
                 if (humerusObserved == 0)
@@ -228,7 +247,14 @@
                 }
                 else
                 {
-                    humerusLikelihoodRatio = 1.5;
+                    if (humerusObserved <= shortHumerusCutoff[bpdCategory])
+                    {
+                        return humerusRatios[bpdCategory, 0];
+                    }
+                    else
+                    {
+                        return humerusRatios[bpdCategory, 1];
+                    }
                 }
 
                 if (femurLikelihoodRatio >= humerusLikelihoodRatio)
@@ -291,6 +317,7 @@
                 _bpdObserved = value;
                 OnPropertyChanged("bpdObserved");
                 OnPropertyChanged("nuchalFoldRatio");
+                OnPropertyChanged("longBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
                 OnPropertyChanged("riskPercentage");
