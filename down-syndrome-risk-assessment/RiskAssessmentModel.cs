@@ -12,6 +12,7 @@
             ventriculomegalyRatio = 1;
             echogenicBowelRatio = 1;
             urinaryDilationRatio = 1;
+            aberrantArteryRatio = 1;
             nasalBoneRatio = 1;
             femurObserved = 0;
             humerusObserved = 0;
@@ -25,8 +26,9 @@
         double[] ventriculomegalyRatios = { 27.52, 0.94, 1 };
         double[] echogenicBowelRatios = { 11.44, 0.9, 1 };
         double[] urinaryDilationRatios = { 7.63, 0.92, 1 };
+        double[] aberrantArteryRatios = { 21.48, 0.71, 1 };
         double[] nasalBoneRatios = { 66.75, 23.27, 0.46, 1 };
-        double[,] femurRatios = new double[2, 2] { { 0.5, 1.5 }, { 0.6, 1.6 } };
+        double[,] femurRatios = new double[2, 2] { { 0.5, 0.8 }, { 0.6, 1.6 } };
         double[,] humerusRatios = new double[2, 2] { { 0.4, 1.4 }, { 0.3, 1.3 } };
 
         //Long Bone Cutoffs
@@ -177,6 +179,39 @@
         {
             get { return urinaryDilationRatio.Equals(urinaryDilationRatios[2]); }
             set { urinaryDilationRatio = urinaryDilationRatios[2]; }
+        }
+
+        // Aberrant Right Subclavian Artery
+        private double _aberrantArteryRatio;
+        public double aberrantArteryRatio
+        {
+            get { return _aberrantArteryRatio; }
+            set
+            {
+                _aberrantArteryRatio = value;
+                OnPropertyChanged("aberrantArteryYes");
+                OnPropertyChanged("aberrantArteryNo");
+                OnPropertyChanged("aberrantArteryNotAssessed");
+                OnPropertyChanged("aberrantArteryRatio");
+                OnPropertyChanged("likelihoodRatio");
+                OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("riskPercentage");
+            }
+        }
+        public bool aberrantArteryYes
+        {
+            get { return aberrantArteryRatio.Equals(aberrantArteryRatios[0]); }
+            set { aberrantArteryRatio = aberrantArteryRatios[0]; }
+        }
+        public bool aberrantArteryNo
+        {
+            get { return aberrantArteryRatio.Equals(aberrantArteryRatios[1]); }
+            set { aberrantArteryRatio = aberrantArteryRatios[1]; }
+        }
+        public bool aberrantArteryNotAssessed
+        {
+            get { return aberrantArteryRatio.Equals(aberrantArteryRatios[2]); }
+            set { aberrantArteryRatio = aberrantArteryRatios[2]; }
         }
 
         // Long Bone (Short Femur and Short Humerus)
@@ -355,7 +390,7 @@
         // Likelihood Ratio
         public double likelihoodRatio
         {
-            get { return echogenicFocusRatio * ventriculomegalyRatio * echogenicBowelRatio * urinaryDilationRatio * longBoneRatio * nasalBoneRatio * nuchalFoldRatio; }
+            get { return echogenicFocusRatio * ventriculomegalyRatio * echogenicBowelRatio * urinaryDilationRatio * aberrantArteryRatio * longBoneRatio * nasalBoneRatio * nuchalFoldRatio; }
         }
 
         // Adjusted Risk Factor

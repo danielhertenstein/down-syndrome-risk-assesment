@@ -21,6 +21,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -69,6 +70,15 @@
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="5" Orientation="Vertical">
+            <Label Margin="0,0,0,5" Padding="0">Aberrant Right Subclavian Artery:</Label>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="AberrantArtery" Content="Yes" IsChecked="{Binding aberrantArteryYes, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="AberrantArtery" Content="No" IsChecked="{Binding aberrantArteryNo, Mode=TwoWay}" Margin="0,0,7,11" />
+                <RadioButton GroupName="AberrantArtery" Content="Not Assessed" IsChecked="{Binding aberrantArteryNotAssessed, Mode=TwoWay}" Margin="0,0,7,11" />
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Nasal Bone:</Label>
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="NasalBone" Content="Absent" IsChecked="{Binding nasalBoneAbsent, Mode=TwoWay}" Margin="0,0,7,11" />
@@ -78,14 +88,14 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">BPD (mm):</Label>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="bpdTextBox" Width="120" Text="{Binding bpdObserved, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,7,11" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="8" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label Margin="0,0,7,5" Padding="0" Width="120">Femur Length (mm):</Label>
                 <Label Margin="0,0,0,5" Padding="0">Humerus Length (mm):</Label>
@@ -96,14 +106,14 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="8" Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="9" Orientation="Vertical">
             <Label Margin="0,0,0,5" Padding="0">Nuchal Fold Thickness (mm):</Label>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="nuchalFoldTextBox" Width="120" Text="{Binding nuchalFoldObserved, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,7,11" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="9" Orientation="Vertical">
+        <StackPanel Grid.Column="0" Grid.Row="10" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Label Padding="0" Margin="0,0,5,5" MinWidth="140">Likelihood ratio:</Label>
                 <TextBox Width="100" Text="{Binding likelihoodRatio, StringFormat={}{0:N3}, Mode=OneWay}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" Margin="0,0,0,5" IsTabStop="False"/>
@@ -118,7 +128,7 @@
             </StackPanel>
         </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2" Margin="0, 11, 0, 0" Text="*Select 'Previously Evaluated' for nasal bone if the patient's&#x0a;a priori risk is based on a first trimester screen that incorporated&#x0a;data on presence or absence of nasal bone." TextWrapping="Wrap"/>
+        <TextBlock Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="2" Margin="0, 11, 0, 0" Text="*Select 'Previously Evaluated' for nasal bone if the patient's&#x0a;a priori risk is based on a first trimester screen that incorporated&#x0a;data on presence or absence of nasal bone." TextWrapping="Wrap"/>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" >
             <Label Padding="0" Margin="11,0,0,5">Likelihood Ratio</Label>
@@ -127,8 +137,9 @@
         <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding ventriculomegalyRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
         <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding echogenicBowelRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
         <TextBlock Grid.Column="1" Grid.Row="4" Text="{Binding urinaryDilationRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
-        <TextBlock Grid.Column="1" Grid.Row="5" Text="{Binding nasalBoneRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
-        <TextBlock Grid.Column="1" Grid.Row="7" Text="{Binding longBoneRatio, StringFormat=N3}" Margin="11,0,0,0" MinWidth="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="8" Text="{Binding nuchalFoldRatio, StringFormat=N3}" Margin="11,21,0,0" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="{Binding aberrantArteryRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="6" Text="{Binding nasalBoneRatio}" Margin="11,21,0,11" MinWidth="40" HorizontalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="8" Text="{Binding longBoneRatio, StringFormat=N3}" Margin="11,0,0,0" MinWidth="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="9" Text="{Binding nuchalFoldRatio, StringFormat=N3}" Margin="11,21,0,0" MinWidth="40" HorizontalAlignment="Center" />
     </Grid>
 </Window>
