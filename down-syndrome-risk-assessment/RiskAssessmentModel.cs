@@ -28,12 +28,16 @@
         double[] urinaryDilationRatios = { 7.63, 0.92, 1 };
         double[] aberrantArteryRatios = { 21.48, 0.71, 1 };
         double[] nasalBoneRatios = { 66.75, 23.27, 0.46, 1 };
-        double[,] femurRatios = new double[2, 2] { { 0.5, 0.8 }, { 0.6, 1.6 } };
-        double[,] humerusRatios = new double[2, 2] { { 0.4, 1.4 }, { 0.3, 1.3 } };
+        double[] femurRatios = { 3.72, 0.80};
+        double[] humerusRatios = { 4.81, 0.74 };
 
         //Long Bone Cutoffs
-        double[] shortfemurCutoff = { 1, 2 };
-        double[] shortHumerusCutoff = { 1, 2 };        
+        double[] shortfemurCutoff = { 13.64, 14.40, 15.16, 15.93, 16.69, 17.45, 18.21, 18.97, 19.73, 20.50, 21.26, 22.02,
+                                      22.78, 23.54, 24.30, 25.07, 25.83, 26.59, 27.35, 28.11, 28.87, 29.64, 30.40, 31.16,
+                                      31.92, 32.68, 33.44, 34.21, 34.97, 35.73, 36.49, 37.25, 38.01 };
+        double[] shortHumerusCutoff = { 13.73, 14.42, 15.11, 15.80, 16.50, 17.19, 17.88, 18.57, 19.26, 19.95, 20.64, 21.33,
+                                        22.02, 22.71, 23.40, 24.09, 24.78, 25.48, 26.17, 26.86, 27.55, 28.24, 28.93, 29.62,
+                                        30.31, 31.00, 31.69, 32.38, 33.07, 33.76, 34.46, 35.15, 35.84 };        
 
         // a priori Risk
         private int _aprioriRisk;
@@ -215,8 +219,8 @@
         }
 
         // Long Bone (Short Femur and Short Humerus)
-        private int _femurObserved;
-        public int femurObserved
+        private double _femurObserved;
+        public double femurObserved
         {
             get { return _femurObserved; }
             set
@@ -230,8 +234,8 @@
             }
         }
 
-        private int _humerusObserved;
-        public int humerusObserved
+        private double _humerusObserved;
+        public double humerusObserved
         {
             get { return _humerusObserved; }
             set
@@ -254,13 +258,114 @@
                 double femurLikelihoodRatio;
                 double humerusLikelihoodRatio;
 
-                int bpdCategory = 0;
-                if (bpdObserved < 20)
+                int bpdCategory = -1;
+                switch (bpdObserved)
                 {
-                    bpdCategory = 1;
+                    case 28:
+                        bpdCategory = 0;
+                        break;
+                    case 29:
+                        bpdCategory = 1;
+                        break;
+                    case 30:
+                        bpdCategory = 2;
+                        break;
+                    case 31:
+                        bpdCategory = 3;
+                        break;
+                    case 32:
+                        bpdCategory = 4;
+                        break;
+                    case 33:
+                        bpdCategory = 5;
+                        break;
+                    case 34:
+                        bpdCategory = 6;
+                        break;
+                    case 35:
+                        bpdCategory = 7;
+                        break;
+                    case 36:
+                        bpdCategory = 8;
+                        break;
+                    case 37:
+                        bpdCategory = 9;
+                        break;
+                    case 38:
+                        bpdCategory = 10;
+                        break;
+                    case 39:
+                        bpdCategory = 11;
+                        break;
+                    case 40:
+                        bpdCategory = 12;
+                        break;
+                    case 41:
+                        bpdCategory = 13;
+                        break;
+                    case 42:
+                        bpdCategory = 14;
+                        break;
+                    case 43:
+                        bpdCategory = 15;
+                        break;
+                    case 44:
+                        bpdCategory = 16;
+                        break;
+                    case 45:
+                        bpdCategory = 17;
+                        break;
+                    case 46:
+                        bpdCategory = 18;
+                        break;
+                    case 47:
+                        bpdCategory = 19;
+                        break;
+                    case 48:
+                        bpdCategory = 20;
+                        break;
+                    case 49:
+                        bpdCategory = 21;
+                        break;
+                    case 50:
+                        bpdCategory = 22;
+                        break;
+                    case 51:
+                        bpdCategory = 23;
+                        break;
+                    case 52:
+                        bpdCategory = 24;
+                        break;
+                    case 53:
+                        bpdCategory = 25;
+                        break;
+                    case 54:
+                        bpdCategory = 26;
+                        break;
+                    case 55:
+                        bpdCategory = 27;
+                        break;
+                    case 56:
+                        bpdCategory = 28;
+                        break;
+                    case 57:
+                        bpdCategory = 29;
+                        break;
+                    case 58:
+                        bpdCategory = 30;
+                        break;
+                    case 59:
+                        bpdCategory = 31;
+                        break;
+                    case 60:
+                        bpdCategory = 32;
+                        break;
+                    default:
+                        bpdCategory = -1;
+                        break;
                 }
 
-                if (femurObserved == 0)
+                if (femurObserved == 0 || bpdCategory == -1)
                 {
                     femurLikelihoodRatio = 1;
                 }
@@ -268,15 +373,15 @@
                 {
                     if (femurObserved <= shortfemurCutoff[bpdCategory])
                     {
-                        return femurRatios[bpdCategory, 0];
+                        femurLikelihoodRatio = femurRatios[0];
                     }
                     else
                     {
-                        return femurRatios[bpdCategory, 1];
+                        femurLikelihoodRatio = femurRatios[1];
                     }
                 }
 
-                if (humerusObserved == 0)
+                if (humerusObserved == 0 || bpdCategory == -1)
                 {
                     humerusLikelihoodRatio = 1;
                 }
@@ -284,11 +389,11 @@
                 {
                     if (humerusObserved <= shortHumerusCutoff[bpdCategory])
                     {
-                        return humerusRatios[bpdCategory, 0];
+                        humerusLikelihoodRatio = humerusRatios[0];
                     }
                     else
                     {
-                        return humerusRatios[bpdCategory, 1];
+                        humerusLikelihoodRatio = humerusRatios[1];
                     }
                 }
 
