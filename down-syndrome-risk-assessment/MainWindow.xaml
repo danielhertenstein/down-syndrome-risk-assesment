@@ -120,7 +120,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Padding="0" Margin="0,0,5,5" Content="Adjusted risk (1/N):" MinWidth="140"/>
-                <TextBox Width="100" Text="{Binding adjustedRisk, Mode=OneWay, StringFormat={}{0:N3}}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" IsTabStop="False" Margin="0,0,0,5"/>
+                <TextBox Width="100" Text="{Binding adjustedRiskString, Mode=OneWay}" Background="#FFA7F17C" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" IsTabStop="False" Margin="0,0,0,5"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Padding="0" Margin="0,0,5,11" Content="Adjusted risk percentage:" MinWidth="140"/>

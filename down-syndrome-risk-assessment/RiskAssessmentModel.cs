@@ -49,6 +49,7 @@
                 _aprioriRisk = value;
                 OnPropertyChanged("aprioriRisk");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -67,6 +68,7 @@
                 OnPropertyChanged("echogenicFocusRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -100,6 +102,7 @@
                 OnPropertyChanged("ventriculomegalyRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -133,6 +136,7 @@
                 OnPropertyChanged("echogenicBowelRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -166,6 +170,7 @@
                 OnPropertyChanged("urinaryDilationRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -199,6 +204,7 @@
                 OnPropertyChanged("aberrantArteryRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -230,6 +236,7 @@
                 OnPropertyChanged("longBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -245,6 +252,7 @@
                 OnPropertyChanged("longBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -423,6 +431,7 @@
                 OnPropertyChanged("nasalBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -460,6 +469,7 @@
                 OnPropertyChanged("longBoneRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -475,6 +485,7 @@
                 OnPropertyChanged("nuchalFoldRatio");
                 OnPropertyChanged("likelihoodRatio");
                 OnPropertyChanged("adjustedRisk");
+                OnPropertyChanged("adjustedRiskString");
                 OnPropertyChanged("riskPercentage");
             }
         }
@@ -504,6 +515,20 @@
             get { return aprioriRisk / likelihoodRatio; }
         }
 
+        // String Representation of the Adjusted Risk Factor
+        public string adjustedRiskString
+        {
+            get
+            {
+                if (adjustedRisk < 2)
+                {
+                    return "< 2";
+                }
+                else
+                    return adjustedRisk.ToString("N3");
+            }
+        }
+
         // Adjusted Risk Percentage
         public string riskPercentage
         {
@@ -513,6 +538,10 @@
                 if (percentage < 0.001)
                 {
                     return "< 0.001%";
+                }
+                else if (percentage > 50)
+                {
+                    return "> 50%";
                 }
                 else
                 {
