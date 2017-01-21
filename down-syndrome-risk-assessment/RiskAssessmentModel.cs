@@ -29,7 +29,7 @@
         double[] aberrantArteryRatios = { 21.48, 0.71, 1 };
         double[] nasalBoneRatios = { 66.75, 23.27, 0.46, 1 };
         double[] femurRatios = { 3.72, 0.80};
-        double[] humerusRatios = { 4.81, 0.74 };
+        double[] humerusRatios = { 4.81, 0.80 };
 
         //Long Bone Cutoffs
         double[] shortfemurCutoff = { 13.64, 14.40, 15.16, 15.93, 16.69, 17.45, 18.21, 18.97, 19.73, 20.50, 21.26, 22.02,
@@ -407,11 +407,21 @@
 
                 if (femurLikelihoodRatio >= humerusLikelihoodRatio)
                 {
-                    return femurLikelihoodRatio;
+                    if (femurLikelihoodRatio == 1 && humerusLikelihoodRatio != 1)
+                    {
+                        return humerusLikelihoodRatio;
+                    }
+                    else
+                        return femurLikelihoodRatio;
                 }
                 else
                 {
-                    return humerusLikelihoodRatio;
+                    if (humerusLikelihoodRatio == 1 && femurLikelihoodRatio != 1)
+                    {
+                        return femurLikelihoodRatio;
+                    }
+                    else
+                        return humerusLikelihoodRatio;
                 }
             }
         }
