@@ -2,6 +2,7 @@
 {
     using System;
     using System.ComponentModel;
+    using System.Windows;
 
     class RiskAssessmentModel : INotifyPropertyChanged
     {
@@ -109,7 +110,12 @@
         public bool ventriculomegalyYes
         {
             get { return ventriculomegalyRatio.Equals(ventriculomegalyRatios[0]); }
-            set { ventriculomegalyRatio = ventriculomegalyRatios[0]; }
+            set
+            {
+                ventriculomegalyRatio = ventriculomegalyRatios[0];
+                MessageBox.Show("This calculator is only intended to be utilized for Down Syndrome risk assessment when lateral cerebral ventricles measure <= 15 mm. If ventricle measurement exceeds 15 mm, calculator should not be used.",
+                                "DSRAM Proper Usage Notice");
+            }
         }
         public bool ventriculomegalyNo
         {
