@@ -3,6 +3,7 @@
     using System;
     using System.ComponentModel;
     using System.Windows;
+    using System.Windows.Data;
 
     class RiskAssessmentModel : INotifyPropertyChanged
     {
@@ -113,7 +114,7 @@
             set
             {
                 ventriculomegalyRatio = ventriculomegalyRatios[0];
-                MessageBox.Show("This calculator is only intended to be utilized for Down Syndrome risk assessment when lateral cerebral ventricles measure <= 15 mm. If ventricle measurement exceeds 15 mm, calculator should not be used.",
+                MessageBox.Show("This calculator is only intended to be utilized for Down Syndrome risk assessment when lateral cerebral ventricles measure <= 15 mm. If ventricle measurement exceeds 15 mm, this calculator should not be used.",
                                 "DSRAM Proper Usage Notice");
             }
         }
@@ -582,6 +583,31 @@
         }
 
         #endregion
+    }
+
+    public class StringToDoubleConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            string strVal = value.ToString();
+            if (string.IsNullOrEmpty(strVal))
+            {
+                return 0.0;
+            }
+            else
+            {
+                return Double.Parse(strVal);
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value == null)
+            {
+                return 0;
+            }
+            return value.ToString();
+        }
     }
 
     // Simple class to hold the information for the long bone dropdown box items.
