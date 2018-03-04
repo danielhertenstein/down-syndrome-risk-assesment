@@ -274,7 +274,7 @@
                 double humerusLikelihoodRatio;
 
                 int bpdCategory = -1;
-                switch (Convert.ToInt64(bpdObserved))
+                switch (Convert.ToInt32(bpdObserved))
                 {
                     case 28:
                         bpdCategory = 0;
@@ -515,8 +515,18 @@
                 {
                     return 1;
                 }
+                int converted_bpd = Convert.ToInt32(bpdObserved);
+                double max_nuchal = 7.0;
+                if (converted_bpd < 38)
+                {
+                    max_nuchal = 5.0;
+                }
+                else if (max_nuchal < 50) {
+                    max_nuchal = 6.0;
+                }
+                double converted_nuchal = Math.Min(max_nuchal, nuchalFoldObserved);
                 double expected = 0.131 + 0.08 * bpdObserved;
-                return 0.4 + 0.1 * Math.Exp(2 * (nuchalFoldObserved - expected));
+                return 0.4 + 0.1 * Math.Exp(2 * (converted_nuchal - expected));
             }
         }
 
