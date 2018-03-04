@@ -274,7 +274,7 @@
                 double humerusLikelihoodRatio;
 
                 int bpdCategory = -1;
-                switch (bpdObserved)
+                switch (Convert.ToInt64(bpdObserved))
                 {
                     case 28:
                         bpdCategory = 0;
@@ -474,8 +474,8 @@
         }
 
         // BPD and Nuchal Fold Thickness
-        private int _bpdObserved;
-        public int bpdObserved
+        private double _bpdObserved;
+        public double bpdObserved
         {
             get { return _bpdObserved; }
             set
