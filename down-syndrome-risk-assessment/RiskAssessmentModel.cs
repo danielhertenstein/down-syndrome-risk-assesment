@@ -521,7 +521,7 @@
                 {
                     max_nuchal = 5.0;
                 }
-                else if (max_nuchal < 50) {
+                else if (converted_bpd < 50) {
                     max_nuchal = 6.0;
                 }
                 double converted_nuchal = Math.Min(max_nuchal, nuchalFoldObserved);
